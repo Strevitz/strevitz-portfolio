@@ -174,7 +174,7 @@ span{
 
 #linkedin{
     position: absolute;
-    top: 207%;
+    top: 0%;
     left: 80%;
     z-index: 2;
     width: 4em;
@@ -183,10 +183,10 @@ span{
 
 #github{
     position: absolute;
-    top: 109%;
-    left: 80%;
-    z-index: 2;
-    width: 4em;
+    top: 0%;
+    left: 78%;
+    z-index: 5;
+    width: 4rem;
     height: auto;
 }
 
@@ -199,10 +199,10 @@ span{
 
 .circle1{
     background-color: $strevitz-yellow;
-    top: 92%;
-    left: 86%;
-    width: 12%;
-    height: 40vh;
+    top: -12%;
+    left: 69%;
+    width: 35vw;
+    height: 35vh;
 }
 
 .circle2{
@@ -226,9 +226,11 @@ footer{
 
 section{
     min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     h2{
         position: absolute;
         color: $headline-color;
@@ -243,10 +245,12 @@ section{
 }
 
 .project{
+    position: relative;
     background: white;
 }
 
 .contact{
+    position: relative;
     background: black;
 }
 
@@ -261,32 +265,40 @@ section{
 
 #headline1{
     font-size: $headline-size;
-    top: 20%;
-    left: 0;
-    transform: rotate(90deg);
+    top: -10%;
+    left: 5%;
+    transform: translate(-10%, -5%);
+    z-index: 0;
 }
 
 #headline2{
     font-size: $headline-size;
-    top: 149%;
-    left: 0;
-    transform: rotate(90deg);
+    top: -10%;
+    left: 11%;
+    transform: translate(-10%, -11%);
 }
 
 #headline3{
     font-size: $headline-size;
     color: white;
     opacity: 0.1;
-    top: 248%;
-    left: -32%;
-    transform: rotate(90deg);
+    top: -10%;
+    left: 11%;
+    transform: translate(-10%, -11%);
+}
+
+#headline4{
+    font-size: $headline-size;
+    top: -15%;
+    left: 5%;
+    transform: translate(-10%, -5%);
+    z-index: 0;
 }
 
 /***********************[ Form ]***********************/
 
 .form{
-    padding-left: 5rem;
-    margin-top: 8rem;
+    order: 1;
     width: 100%;
     display:flex;
     justify-content:center;
@@ -385,18 +397,41 @@ button{
 }
 
 .contact-info{
-    padding-right: 5rem;
-    margin-top: 1rem;
+    order: 2;
     color: white;
     line-height: 3rem;
     width: 100%;
     display:flex;
-    justify-content:flex-end;
-    align-items: flex-end;
+    justify-content:center;
+    align-items: flex-start;
     flex-direction: column;
 }
 
+.contact-box{
+    margin-top: 24vh;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media screen and (max-width: 768px){
+
+    .contact-info{
+        order: 1;
+        margin-bottom: 5vh;
+    }
+
+    .form{
+        order: 2;
+        margin-bottom: 10vh;
+    }
+
+    .contact-box{
+        display: flex;
+        flex-direction: column;
+    }
+
     .line{
         width: 30px;
         height: 3px;
@@ -455,6 +490,10 @@ button{
     }
 
     .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.5s;
+    }
+
+    .nav-links li:nth-child(4){
         transition: all 0.5s ease 0.6s;
     }
 
@@ -462,4 +501,119 @@ button{
         opacity: 1;
     }
 
+}
+
+:root{
+    --hue-neutral: 52;
+    --hue-wrong: 340;
+    --hue-correct: 162;
+}
+
+.quiz{
+    position: relative;
+    flex-direction: column;
+    min-height: 82vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    h2{
+        position: absolute;
+        color: $headline-color;
+        z-index: 0;
+        opacity: 0.05;
+    }
+}
+
+body{
+    --hue: var(--hue-neutral);
+    background-color: hsl(var(--hue), 100%, 50%);
+}
+
+body.correct{
+    --hue: var(--hue-correct);
+}
+
+body.wrong{
+    --hue: var(--hue-wrong);
+}
+
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    z-index: 1;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn{
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 40%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+    outline: none;
+}
+
+.btn:hover{
+    border-color: black;
+}
+
+.btn.correct{
+    --hue: var(--hue-correct);
+}
+
+.btn.wrong{
+    --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn{
+    background-color: hsl(var(--hue), 100%, 10%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    &:hover{
+        color: lightgray!important;
+    }
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
+
+.quiz-footer{
+    padding: 0;
+}
+
+.footer-text-box{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 0;
+}
+
+h3{
+    display: flex;
+    align-self: center;
 }
