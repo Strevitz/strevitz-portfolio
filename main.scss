@@ -141,7 +141,7 @@ span{
     pointer-events: none;
 }
 */
-/***********************[ Circles ]***********************/
+/***********************[ social links ]***********************/
 
 #avatar{
     position: absolute;
@@ -155,19 +155,68 @@ span{
     @include box-shadow(0px 2px 14px 0px $shadow-color);
 }
 
-.circle2{
-    clip-path: circle(30.1% at 50% 50%);
-    background-color: #ffffff;
+.linkedin-triangle{
+    fill:#fff;
+    color:#000;
     position: absolute;
-    z-index: 1;
+    top: 0;
+    border: 0;
+    right: 0;
 }
 
-.circle2{
-    top: 192%;
-    left: 86%;
-    width: 12%;
-    height: 40vh;
+.linkedin{
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    font-size: 2rem;
+    top: 2%;
+    right: 1%;
+    z-index: 2;
+    transform:translate(-2%, -1%) rotate(45deg);
 }
+
+.github-corner{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:0;
+    fill:#ffdd00;
+    color: black;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+}
+
+.octo-body, .octo-arm{
+    color: black!important;
+}
+
+.github-corner:hover .octo-arm{
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave{
+    0%,100%{
+        transform:rotate(0);
+    }
+    20%,60%{
+        transform:rotate(-25deg);
+    }
+    40%,80%{
+        transform:rotate(10deg);
+    }
+}
+
+@media (max-width:500px){
+    .github-corner:hover .octo-arm{
+        animation:none;
+    }
+    .github-corner .octo-arm{
+        animation:octocat-wave 560ms ease-in-out;
+    }
+}
+
 
 /***********************[ Footer ]***********************/
 
@@ -238,17 +287,6 @@ section{
 #headline3{
     color: white;
     opacity: 0.13;
-}
-
-.linkedin{
-    color: black;
-    font-weight: bold;
-    position: absolute;
-    font-size: 2rem;
-    top: 2%;
-    right: 1%;
-    z-index: 2;
-    transform:translate(-2%, -1%) rotate(45deg);
 }
 
 /***********************[ Form ]***********************/
