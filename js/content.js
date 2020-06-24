@@ -54,16 +54,12 @@ $(document).ready(function() {
         }
   });
 
-    $( "#headline1" ).effect("slide", {direction: "left"}, 800);
-  $( "#firsttext" ).slideUp(300).delay(1000).fadeIn(600);
 
-  $('.circle1').effect("slide", {direction: "down"}, 1000);
+  $( "#headline1" ).slideUp(300).delay(1000).fadeIn(600);
 
-  $(".circle1").hover(function(){
-      $(this).effect("bounce", "slow");
-      }, function(){
-      $(this).css("background-color", "#ffdf2c");
-    });
+  $('#avatar').effect("slide", {direction: "up"}, 1000);
+
+
 
   $(window).scroll(function() {
       if ($(document).scrollTop() > 950) {

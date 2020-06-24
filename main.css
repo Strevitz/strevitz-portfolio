@@ -141,33 +141,10 @@ span {
 }
 
 /***********************[ Carousel ]***********************/
-#carousel {
-  max-width: 400px;
-  margin-top: 4rem;
-  width: 100vw;
-  height: 300px;
-  display: relative;
-}
-
-#carousel img {
-  width: 70vw;
-  height: auto;
-  border-radius: 3%;
-  -webkit-box-shadow: 0px 2px 14px 0px #0f0f0f75;
-  box-shadow: 0px 2px 14px 0px #0f0f0f75;
-  display: hidden;
-  /* hide images until carousel prepares them */
-  z-index: 0;
-}
-
-.gallery {
-  max-width: 100%;
-}
-
 /***********************[ Cursor ]***********************/
 /*
 .cursor{
-   font-size: 0.5em;
+   font-size: 0.5rem;
     position: absolute;
     transform: translate(-100%, 100%);
     z-index: 4;
@@ -177,48 +154,23 @@ span {
 /***********************[ Circles ]***********************/
 #avatar {
   position: absolute;
-  border-radius: 50%;
-  width: 20%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  width: 12rem;
   height: auto;
-  top: 24%;
-  left: 79%;
+  top: 0%;
+  right: 5%;
   z-index: 2;
   -webkit-box-shadow: 0px 2px 14px 0px #0f0f0f75;
   box-shadow: 0px 2px 14px 0px #0f0f0f75;
 }
 
-#linkedin {
-  position: absolute;
-  top: 0%;
-  left: 80%;
-  z-index: 2;
-  width: 4em;
-  height: auto;
-}
-
-#github {
-  position: absolute;
-  top: 0%;
-  left: 78%;
-  z-index: 5;
-  width: 4rem;
-  height: auto;
-}
-
-.circle2, .circle1 {
+.circle2 {
   -webkit-clip-path: circle(30.1% at 50% 50%);
           clip-path: circle(30.1% at 50% 50%);
   background-color: #ffffff;
   position: absolute;
   z-index: 1;
-}
-
-.circle1 {
-  background-color: #ffdd00;
-  top: -12%;
-  left: 69%;
-  width: 35vw;
-  height: 35vh;
 }
 
 .circle2 {
@@ -276,48 +228,46 @@ section h2 {
 }
 
 #firsttext {
-  width: 50%;
-  padding-top: 20px;
+  width: 80%;
+  padding-top: 100px;
 }
 
 #thirdtext {
   color: white;
 }
 
-#headline1 {
-  font-size: 20rem;
-  top: -10%;
-  left: 5%;
-  -webkit-transform: translate(-10%, -5%);
-          transform: translate(-10%, -5%);
+#headline1, #headline2, #headline3 {
+  font-size: 6rem;
+  top: 0%;
+  left: 2%;
+  -webkit-transform: translate(0%, -2%);
+          transform: translate(0%, -2%);
   z-index: 0;
 }
 
-#headline2 {
-  font-size: 20rem;
-  top: -10%;
-  left: 11%;
-  -webkit-transform: translate(-10%, -11%);
-          transform: translate(-10%, -11%);
+#headline1, #headline4 {
+  font-size: 12rem;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #headline3 {
-  font-size: 20rem;
   color: white;
-  opacity: 0.1;
-  top: -10%;
-  left: 11%;
-  -webkit-transform: translate(-10%, -11%);
-          transform: translate(-10%, -11%);
+  opacity: 0.13;
 }
 
-#headline4 {
-  font-size: 20rem;
-  top: -15%;
-  left: 5%;
-  -webkit-transform: translate(-10%, -5%);
-          transform: translate(-10%, -5%);
-  z-index: 0;
+.linkedin {
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  font-size: 2rem;
+  top: 2%;
+  right: 1%;
+  z-index: 2;
+  -webkit-transform: translate(-2%, -1%) rotate(45deg);
+          transform: translate(-2%, -1%) rotate(45deg);
 }
 
 /***********************[ Form ]***********************/
@@ -482,6 +432,16 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  #avatar {
+    display: none !important;
+  }
+  #headline1 {
+    font-size: 6rem;
+    top: 0%;
+    left: 2%;
+    -webkit-transform: translate(0%, -2%);
+            transform: translate(0%, -2%);
+  }
   .contact-info {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -593,8 +553,9 @@ button {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -713,7 +674,7 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
+  font-size: 1.4rem;
+  margin-bottom: 90px;
 }
 /*# sourceMappingURL=main.css.map */

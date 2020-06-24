@@ -129,30 +129,12 @@ span{
 
 /***********************[ Carousel ]***********************/
 
-#carousel {
-    max-width: 400px;
-    margin-top: 4rem;
-    width:100vw;
-    height: 300px;
-    display: relative;
-    img {
-        width: 70vw;
-        height: auto;
-        border-radius: 3%;
-        @include box-shadow(0px 2px 14px 0px $shadow-color);
-        display: hidden; /* hide images until carousel prepares them */
-        z-index: 0;
-    }
-}
 
-.gallery{
-    max-width: 100%;
-}
 
 /***********************[ Cursor ]***********************/
 /*
 .cursor{
-   font-size: 0.5em;
+   font-size: 0.5rem;
     position: absolute;
     transform: translate(-100%, 100%);
     z-index: 4;
@@ -163,46 +145,21 @@ span{
 
 #avatar{
     position: absolute;
-    border-radius: 50%;
-    width: 20%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    width: 12rem;
     height: auto;
-    top: 24%;
-    left: 79%;
+    top: 0%;
+    right: 5%;
     z-index: 2;
     @include box-shadow(0px 2px 14px 0px $shadow-color);
 }
 
-#linkedin{
-    position: absolute;
-    top: 0%;
-    left: 80%;
-    z-index: 2;
-    width: 4em;
-    height: auto;
-}
-
-#github{
-    position: absolute;
-    top: 0%;
-    left: 78%;
-    z-index: 5;
-    width: 4rem;
-    height: auto;
-}
-
-.circle2, .circle1{
+.circle2{
     clip-path: circle(30.1% at 50% 50%);
     background-color: #ffffff;
     position: absolute;
     z-index: 1;
-}
-
-.circle1{
-    background-color: $strevitz-yellow;
-    top: -12%;
-    left: 69%;
-    width: 35vw;
-    height: 35vh;
 }
 
 .circle2{
@@ -255,44 +212,43 @@ section{
 }
 
 #firsttext{
-    width: 50%;
-    padding-top: 20px;
+    width: 80%;
+    padding-top: 100px;
 }
 
 #thirdtext{
     color: white;
 }
 
-#headline1{
+#headline1, #headline2, #headline3{
     font-size: $headline-size;
-    top: -10%;
-    left: 5%;
-    transform: translate(-10%, -5%);
+    top: 0%;
+    left: 2%;
+    transform: translate(0%, -2%);
     z-index: 0;
 }
 
-#headline2{
-    font-size: $headline-size;
-    top: -10%;
-    left: 11%;
-    transform: translate(-10%, -11%);
+#headline1, #headline4{
+    font-size: 12rem;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #headline3{
-    font-size: $headline-size;
     color: white;
-    opacity: 0.1;
-    top: -10%;
-    left: 11%;
-    transform: translate(-10%, -11%);
+    opacity: 0.13;
 }
 
-#headline4{
-    font-size: $headline-size;
-    top: -15%;
-    left: 5%;
-    transform: translate(-10%, -5%);
-    z-index: 0;
+.linkedin{
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    font-size: 2rem;
+    top: 2%;
+    right: 1%;
+    z-index: 2;
+    transform:translate(-2%, -1%) rotate(45deg);
 }
 
 /***********************[ Form ]***********************/
@@ -417,6 +373,17 @@ button{
 
 @media screen and (max-width: 768px){
 
+    #avatar{
+        display: none!important;
+    }
+
+    #headline1{
+        font-size: $headline-size;
+        top: 0%;
+        left: 2%;
+        transform: translate(0%, -2%);
+    }
+
     .contact-info{
         order: 1;
         margin-bottom: 5vh;
@@ -517,7 +484,7 @@ button{
     margin: 0;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
     h2{
@@ -615,5 +582,6 @@ body.wrong{
 
 h3{
     display: flex;
-    align-self: center;
+    font-size: 1.4rem;
+    margin-bottom: 90px;
 }
