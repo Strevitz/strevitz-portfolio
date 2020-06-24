@@ -1,3 +1,4 @@
+//nav animation
 const sections = document.querySelectorAll('section');
 const a = document.querySelectorAll('a');
 const bubble = document.querySelector('.bubble');
@@ -35,6 +36,8 @@ sections.forEach(section => {
 })
 
 
+// headline effects
+$( "#headline1 #headline4" ).slideUp(300).delay(1000).fadeIn(600);
 
 $(document).ready(function() {
 
@@ -54,13 +57,10 @@ $(document).ready(function() {
         }
   });
 
-
-  $( "#headline1" ).slideUp(300).delay(1000).fadeIn(600);
-
+//my profile picture effect
   $('#avatar').effect("slide", {direction: "up"}, 1000);
 
-
-
+//change color of list items
   $(window).scroll(function() {
       if ($(document).scrollTop() > 950) {
         $('.list-item').css('color', '#dabb0f', {duration:200});
@@ -77,10 +77,6 @@ $(document).ready(function() {
       }
   });
   */
-  const github = document.querySelectorAll('.circle1');
-  const tl = new TimelineMax();
-  tl.fromTo(github, 0.8, {y: '-230%'}, {y: '0%'});
-
 
   /*
   let mouseCursor = document.querySelector('.cursor');
@@ -89,9 +85,6 @@ $(document).ready(function() {
     mouseCursor.style.top = e.pageY + 'px';
     mouseCursor.style.left = e.pageX + 'px';
   }
-*/
-
-  $("#carousel").waterwheelCarousel();
 
   $("#titleTooltip1, #titleTooltip2, #titleTooltip3, #titleTooltip4, #titleTooltip5").qtip({
     content: 'See the project',
@@ -113,9 +106,12 @@ $(document).ready(function() {
 
   });
 
+  */
+
 
 });
 
+//menu effect
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.nav-links li');
