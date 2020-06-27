@@ -199,7 +199,8 @@ span {
   right: 0;
 }
 
-.octo-body, .octo-arm {
+.octo-body,
+.octo-arm {
   color: black !important;
 }
 
@@ -209,30 +210,36 @@ span {
 }
 
 @-webkit-keyframes octocat-wave {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  20%, 60% {
+  20%,
+  60% {
     -webkit-transform: rotate(-25deg);
             transform: rotate(-25deg);
   }
-  40%, 80% {
+  40%,
+  80% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
   }
 }
 
 @keyframes octocat-wave {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  20%, 60% {
+  20%,
+  60% {
     -webkit-transform: rotate(-25deg);
             transform: rotate(-25deg);
   }
-  40%, 80% {
+  40%,
+  80% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
   }
@@ -305,7 +312,9 @@ section h2 {
   color: white;
 }
 
-#headline1, #headline2, #headline3 {
+#headline1,
+#headline2,
+#headline3 {
   font-size: 6rem;
   top: 0%;
   left: 2%;
@@ -314,7 +323,8 @@ section h2 {
   z-index: 0;
 }
 
-#headline1, #headline4 {
+#headline1,
+#headline4 {
   font-size: 12rem;
   top: 20%;
   left: 50%;
@@ -391,14 +401,16 @@ section h2 {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-.name-form input:focus + .label-name .content-name, .name-form input:valid + .label-name .content-name {
+.name-form input:focus + .label-name .content-name,
+.name-form input:valid + .label-name .content-name {
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
   font-size: 14px;
   color: #ffdd00;
 }
 
-.name-form input:focus + .label-name::after, .name-form input:valid + .label-name::after {
+.name-form input:focus + .label-name::after,
+.name-form input:valid + .label-name::after {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
@@ -681,7 +693,8 @@ body.wrong {
   --hue: var(--hue-wrong);
 }
 
-.start-btn, .next-btn {
+.start-btn,
+.next-btn {
   background-color: hsl(var(--hue), 100%, 10%);
   font-size: 1.5rem;
   font-weight: bold;
@@ -689,7 +702,8 @@ body.wrong {
   color: white;
 }
 
-.start-btn:hover, .next-btn:hover {
+.start-btn:hover,
+.next-btn:hover {
   color: lightgray !important;
 }
 

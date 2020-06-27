@@ -1,72 +1,70 @@
 //nav animation
-const sections = document.querySelectorAll('section');
-const a = document.querySelectorAll('a');
-const bubble = document.querySelector('.bubble');
-const gradients = ['#ffdf2c', 'white', 'black'];
+const sections = document.querySelectorAll("section");
+const a = document.querySelectorAll("a");
+const bubble = document.querySelector(".bubble");
+const gradients = ["#ffdf2c", "white", "black"];
 const options = {
-    threshold: 0.7
-}
+  threshold: 0.7,
+};
 
 let observer = new IntersectionObserver(navCheck, options);
 
-function navCheck(entries){
-    entries.forEach(entry =>{
-        const className = entry.target.className;
-        const activeAnchor = document.querySelector(`[data-page=${className}]`);
-        const gradientIndex = entry.target.getAttribute('data-index');
-        const coords = activeAnchor.getBoundingClientRect();
-        const directions = {
-            height: coords.height,
-            width: coords.width,
-            top: coords.top,
-            left: coords.left
-        };
-        if(entry.isIntersecting){
-            bubble.style.setProperty('left', `${directions.left}px`);
-            bubble.style.setProperty('top', `${directions.top}px`);
-            bubble.style.setProperty('width', `${directions.width}px`);
-            bubble.style.setProperty('height', `${directions.height}px`);
-            bubble.style.background = gradients[gradientIndex];
-        }
-    });
+function navCheck(entries) {
+  entries.forEach((entry) => {
+    const className = entry.target.className;
+    const activeAnchor = document.querySelector(`[data-page=${className}]`);
+    const gradientIndex = entry.target.getAttribute("data-index");
+    const coords = activeAnchor.getBoundingClientRect();
+    const directions = {
+      height: coords.height,
+      width: coords.width,
+      top: coords.top,
+      left: coords.left,
+    };
+    if (entry.isIntersecting) {
+      bubble.style.setProperty("left", `${directions.left}px`);
+      bubble.style.setProperty("top", `${directions.top}px`);
+      bubble.style.setProperty("width", `${directions.width}px`);
+      bubble.style.setProperty("height", `${directions.height}px`);
+      bubble.style.background = gradients[gradientIndex];
+    }
+  });
 }
 
-sections.forEach(section => {
-    observer.observe(section);
-})
-
+sections.forEach((section) => {
+  observer.observe(section);
+});
 
 // headline effects
-$( "#headline1 #headline4" ).slideUp(300).delay(1000).fadeIn(600);
+$("#headline1 #headline4").slideUp(300).delay(1000).fadeIn(600);
 
-$(document).ready(function() {
-
-  $(window).scroll(function() {
-      if ($(document).scrollTop() > 500) {
-          $('#headline2').fadeIn(600);
-        } else {
-          $('#headline2').fadeOut(600);
-        }
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 500) {
+      $("#headline2").fadeIn(600);
+    } else {
+      $("#headline2").fadeOut(600);
+    }
   });
 
-  $(window).scroll(function() {
-      if ($(document).scrollTop() > 800) {
-          $('#headline3').fadeIn(600);
-        } else {
-          $('#headline3').fadeOut(600);
-        }
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 800) {
+      $("#headline3").fadeIn(600);
+    } else {
+      $("#headline3").fadeOut(600);
+    }
   });
 
-//my profile picture effect
-  $('#avatar').effect("slide", {direction: "up"}, 1000);
+  //my profile picture effect
+  $("#avatar").effect("slide", { direction: "up" }, 1000);
 
-//change color of list items
-  $(window).scroll(function() {
-      if ($(document).scrollTop() > 950) {
-        $('.list-item').css('color', '#dabb0f', {duration:200});
-      } else {
-        $('.list-item').css('color', 'black');
-      }
+  //change color of list items
+  $(window).scroll(function () {
+    if ($(document).scrollTop() > 950) {
+      $(".list-item").css("color", "#dabb0f", { duration: 200 });
+    } else {
+      $(".list-item").css("color", "black");
+    }
   });
 
   /*$(window).scroll(function() {
@@ -107,19 +105,16 @@ $(document).ready(function() {
   });
 
   */
-
-
 });
 
 //menu effect
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const links = document.querySelectorAll('.nav-links li');
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
 
-hamburger.addEventListener("click", () =>{
+hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
-  links.forEach(link =>{
+  links.forEach((link) => {
     link.classList.toggle("fade");
   });
 });
-
