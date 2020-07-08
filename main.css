@@ -190,7 +190,7 @@ span {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 0;
+  z-index: 1;
   fill: #ffdd00;
   color: black;
   position: absolute;
@@ -278,29 +278,32 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
 }
 
 section h2 {
   position: absolute;
   color: #020202;
-  z-index: 0;
   opacity: 0.05;
 }
 
 .home {
   position: relative;
   background: #ffdd00;
+  overflow: hidden;
+  height: 110vh;
 }
 
 .project {
   position: relative;
   background: white;
+  overflow-x: hidden;
+  height: 120vh;
 }
 
 .contact {
   position: relative;
   background: black;
+  overflow: hidden;
 }
 
 #firsttext {
@@ -312,7 +315,6 @@ section h2 {
   color: white;
 }
 
-#headline1,
 #headline2,
 #headline3 {
   font-size: 6rem;
@@ -323,7 +325,14 @@ section h2 {
   z-index: 0;
 }
 
-#headline1,
+#headline1 {
+  font-size: 12rem;
+  top: 24%;
+  left: 27%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 #headline4 {
   font-size: 12rem;
   top: 20%;
@@ -338,7 +347,7 @@ section h2 {
 }
 
 /***********************[ Form ]***********************/
-.form {
+form {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -504,10 +513,48 @@ button {
   #avatar {
     display: none !important;
   }
+  .home {
+    height: 130vh;
+  }
+  .typing {
+    margin-right: 1rem !important;
+    top: 8% !important;
+    left: 8%;
+  }
+  .project {
+    height: 145vh;
+    text-align: left;
+  }
+  page {
+    margin-top: 1rem;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    text-align: left;
+  }
+  .portfolio-img {
+    text-align: center;
+  }
+  .portfolio-img img {
+    width: 100% !important;
+  }
+  .portfolio-description {
+    margin-left: 0 !important;
+  }
+  .portfolio-header {
+    margin-top: 1rem !important;
+  }
+  .portfolio-text {
+    font-size: 1.3rem !important;
+  }
+  h4 {
+    font-size: 2rem !important;
+  }
   #headline1 {
     font-size: 6rem;
-    top: 0%;
-    left: 2%;
+    top: 4%;
+    left: 12%;
     -webkit-transform: translate(0%, -2%);
             transform: translate(0%, -2%);
   }
@@ -515,6 +562,7 @@ button {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    margin-top: 7vh;
     margin-bottom: 5vh;
   }
   .form {
@@ -615,6 +663,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
   min-height: 82vh;
   padding: 0;
   margin: 0;
@@ -742,10 +791,200 @@ body.wrong {
 }
 
 h3 {
+  margin-bottom: 2rem;
+}
+
+h4,
+h5 {
+  font-weight: 200;
+  margin: 0.4em 0.4em;
+}
+
+h4 {
+  font-size: 3em;
+}
+
+h5 {
+  color: #333333;
+  font-size: 1.5em;
+}
+
+.typing {
+  position: absolute;
+  top: 20%;
+  left: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.4rem;
-  margin-bottom: 90px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 3rem;
+}
+
+carousel {
+  width: 100%;
+  display: block;
+  font-weight: normal;
+}
+
+carousel page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  padding: 0 2rem;
+  top: 8rem;
+  left: 0;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+carousel page label {
+  cursor: pointer;
+  background: #ffdd00;
+  padding: 4px 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+carousel #page1cb:checked ~ #page1 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+carousel #page2cb:checked ~ #page2 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+carousel #page3cb:checked ~ #page3 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+carousel #page4cb:checked ~ #page4 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+carousel #page5cb:checked ~ #page5 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+carousel #page6cb:checked ~ #page6 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+carousel #page7cb:checked ~ #page7 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.portfolio-description {
+  margin-left: 3rem;
+}
+
+.portfolio-img img {
+  width: 42vw;
+  height: auto;
+}
+
+.portfolio-text {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+.portfolio-header {
+  margin-top: 0;
+}
+
+#okCookie {
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid #494949;
+  z-index: 10;
+}
+
+#okCookie p {
+  margin: 0 0 10px 0;
+  float: left;
+  padding: 5px 0px;
+}
+
+#okCookie #okClose,
+#okCookie #okCprivacy {
+  padding: 4px 10px;
+  float: right;
+  margin-left: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid black;
+  color: black;
+}
+
+#okCookie #okClose {
+  background-color: #ffdd00;
+}
+
+#okCookie #okClose:hover {
+  background-color: #ccb100;
+}
+
+#okCookie #okCprivacy {
+  background-color: white;
+}
+
+#okCookie #okCprivacy:hover {
+  background-color: #d4d4d4;
+}
+
+.okcBeginAnimate {
+  -webkit-animation: myfirst 2s;
+  animation: myfirst 2s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */

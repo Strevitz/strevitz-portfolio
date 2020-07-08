@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
-<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
-<!--[if IE 8]><html class="preIE9"><![endif]-->
-<!--[if gte IE 9]><!--><html lang="pl"><!--<![endif]-->
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -52,15 +49,33 @@
             ><img class="static" src="img/wink2.jpg" /><img
               class="active"
               src="img/wink.gif"
-            /><span>strevitz</span></a
+            /><span>strzewiczek</span></a
           >
         </h1>
         <ul class="nav-links">
-          <li><a class="list-item" data-page="home" href="#">about me</a></li>
           <li>
-            <a class="list-item" data-page="project" href="#">projects</a>
+            <a id="link1" class="list-item" data-page="home" href="#headline1"
+              >about me</a
+            >
           </li>
-          <li><a class="list-item" data-page="contact" href="#">contact</a></li>
+          <li>
+            <a
+              id="link2"
+              class="list-item"
+              data-page="project"
+              href="#github-corner"
+              >projects</a
+            >
+          </li>
+          <li>
+            <a
+              id="link3"
+              class="list-item"
+              data-page="contact"
+              href="#contact-box"
+              >contact</a
+            >
+          </li>
           <li>
             <a class="list-item" data-page="quiz" href="quiz.html">quiz!</a>
           </li>
@@ -78,18 +93,27 @@
         />
 
         <h2 id="headline1">hello</h2>
-        <p id="firsttext">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-          repellat odit accusantium vel ipsa sequi accusamus corporis ratione
-          fugiat ut doloribus magnam dolorem dolor, perspiciatis recusandae
-          cupiditate veniam tempore repellendus sapiente, quisquam debitis unde
-          suscipit assumenda! Quaerat corrupti asperiores modi voluptatum
-          officiis. Ullam, laudantium libero, porro eos repellendus cupiditate
-          quod assumenda soluta quae omnis excepturi rem, voluptas vitae harum
-          similique obcaecati nam vero ex expedita! Ex rerum dolorum cum, nihil
-          blanditiis omnis explicabo dignissimos, itaque eos asperiores ipsa
-          reiciendis saepe.
-        </p>
+        <div class="typing">
+          <h4>hello</h4>
+          <h4 class="type-header">
+            I work with
+            <span
+              class="txt-rotate"
+              data-period="2000"
+              data-rotate='[ "HTML.", "CSS.", "JS.","jQuery.","React.","Node." , "fun!" ]'
+            ></span>
+          </h4>
+          <h5>
+            My name is Arthur, as an engineer I've always been interested in
+            things, especially how they work. <br />
+            What has been the most fascinating for me was how complex mechanism
+            occur in seemingly such simple objects.
+            <br /><br />
+            As an architect, the functionality and aesthetics of the projects
+            are most important to me. <br />
+            The pure code and excellent result is an ideal to which I strive.
+          </h5>
+        </div>
       </section>
 
       <section data-index="1" class="project">
@@ -99,7 +123,9 @@
         <a
           href="https://github.com/Strevitz"
           target="_blank"
+          title="check out my github profile"
           class="github-corner"
+          id="github-corner"
           aria-label="View source on GitHub"
         >
           <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
@@ -118,21 +144,243 @@
           </svg>
         </a>
 
-        <!--
-        <div class="gallery">
-        <div id="carousel">
-          <a href="#" id="titleTooltip1"><img src="img/tabuli_about.png" alt="Image 1" /></a>
-          <a href="#" id="titleTooltip2"><img src="img/barber_cover_page.png" alt="Image 2" /></a>
-          <a href="#" id="titleTooltip3"><img src="img/blackjack_gamepage.png" alt="Image 3" /></a>
-          <a href="#" id="titleTooltip4"><img src="img/tabuli_about.png" alt="Image 4" /></a>
-          <a href="#" id="titleTooltip5"><img src="img/tabuli_about.png" alt="Image 5" /></a>
-        </div>
-      </div>
-      --></section>
+        <carousel id="carousel">
+          <input
+            type="radio"
+            id="page1cb"
+            checked
+            name="pages"
+            style="display: none;"
+          />
+          <input
+            type="radio"
+            id="page2cb"
+            name="pages"
+            style="display: none;"
+          />
+          <input
+            type="radio"
+            id="page3cb"
+            name="pages"
+            style="display: none;"
+          />
+          <input
+            type="radio"
+            id="page4cb"
+            name="pages"
+            style="display: none;"
+          />
+          <input
+            type="radio"
+            id="page5cb"
+            name="pages"
+            style="display: none;"
+          />
+          <input
+            type="radio"
+            id="page6cb"
+            name="pages"
+            style="display: none;"
+          />
+          <input
+            type="radio"
+            id="page7cb"
+            name="pages"
+            style="display: none;"
+          />
+          <!-- page 1 -->
+          <page id="page1">
+            <div class="portfolio-img">
+              <a href="img/coronavirus.png" target="_blank"
+                ><img src="img/coronavirus.png" alt=""
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Coronavirus Stats React App</h4>
+              <p class="portfolio-text">
+                The coronavirus statistics app created in
+                <strong>React</strong> with current global or from each country
+                data of infected, recovered people and deaths from covid-19 API
+                <em>(https://covid19.mathdro.id/api)</em> and using
+                <strong>Axios</strong>.<br />
+                UI like data counting up and animated chart in coronavirus app
+                designed with <strong>Material UI</strong> and
+                <strong>Chart.js</strong>.
+              </p>
+              <a
+                href="https://github.com/Strevitz/coronavirus-stats-app"
+                target="_blank"
+                ><p>see code</p></a
+              >
+              <label for="page2cb" title="Start"><b>next project</b></label>
+            </div>
+          </page>
+          <!-- page 2 -->
+          <page id="page2">
+            <div class="portfolio-img">
+              <a href="img/barber.png" target="_blank"
+                ><img src="img/barber.png" alt=""
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Barbershop Website</h4>
+              <p class="portfolio-text">
+                A website designed in HTML/SCSS/JS for new barbershop in
+                town.<br />
+                <strong>Bootstrap</strong>, <strong>jQuery</strong> and a little
+                bit of <strong>Vanilla JS</strong> were used in the application.
+                <br />
+                I also implemented modal dialogs with bookings and voucher
+                purchase system. <br />
+                The website contains a game created in
+                <strong>JavaScript</strong>.
+              </p>
+              <a href="https://github.com/Strevitz/barber-shop" target="_blank"
+                ><p>see code</p></a
+              >
+              <a href="https://strzewic.vot.pl" target="_blank"
+                ><p>see website</p></a
+              >
+              <label for="page3cb" title="Start"><b>next project</b></label>
+            </div>
+          </page>
+          <!-- page 3 -->
+          <page id="page3">
+            <div class="portfolio-img">
+              <a href="img/architecture.png" target="_blank"
+                ><img src="img/architecture.png" alt=""
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Architecture Studio Website</h4>
+              <p class="portfolio-text">
+                Simple website for my architectural studio. <br />
+                Clean white and navy blue colors are associated with
+                professionalism and robustness. <br />
+                Mostly done to show my architectural designs and technical
+                drawings portfolio. <br />
+                App created with <strong>HTML/CSS/JS</strong> (mostly
+                <strong>jQuery</strong>). I used <strong>jQuery UI</strong> to
+                create tabs, and pure <strong>jQuery</strong> to implement
+                movement into app.
+              </p>
+              <a
+                href="https://github.com/Strevitz/aos-architecture"
+                target="_blank"
+                ><p>see code</p></a
+              >
+              <label for="page4cb" title="Start"><b>next project</b></label>
+            </div>
+          </page>
+          <!-- page 4 -->
+          <page id="page4">
+            <div class="portfolio-img">
+              <a href="img/california.png" target="_blank"
+                ><img src="img/california.png" alt=""
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Blog Website</h4>
+              <p class="portfolio-text">
+                A classic blog website with subpages dedicated for highlights of
+                the best spots in California and my one and a half year stay in
+                <strong>Golden State</strong>.<br />
+                App created with <strong>HTML/CSS/JS</strong> and
+                <strong>jQuery</strong> as cherry on the top the website.
+              </p>
+              <a
+                href="https://github.com/Strevitz/moja-kalifornia"
+                target="_blank"
+                ><p>see code</p></a
+              >
+              <label for="page5cb" title="Start"><b>next project</b></label>
+            </div>
+          </page>
+          <!-- page 5 -->
+          <page id="page5">
+            <div class="portfolio-img">
+              <a href="img/blackjack.png" target="_blank"
+                ><img src="img/blackjack.png" alt=""
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Blackjack JS Game</h4>
+              <p class="portfolio-text">
+                Great game completely made in
+                <strong>Vanilla JavaScript</strong>.<br />
+                Blackjack contains a designed <strong>interactive bot</strong>,
+                which itself makes a strategic decisions in the game.<br />
+                I also implemented a table with current results.
+              </p>
+              <a href="https://github.com/Strevitz/blackjack" target="_blank"
+                ><p>see code</p></a
+              >
+              <label for="page6cb" title="Start"><b>next project</b></label>
+            </div>
+          </page>
+          <!-- page 6 -->
+          <page id="page6">
+            <div class="portfolio-img">
+              <a href="img/todo.png" target="_blank"
+                ><img src="img/todo.png" alt=""
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Todo List JS App</h4>
+              <p class="portfolio-text">
+                Simple and elegant application to create To do lists.<br />
+                Designed in <strong>HTML/CSS</strong> and mostly in
+                <strong>JS</strong> with the ability to filter the list among
+                completed, uncompleted and all tasks. <br />
+                The app has also applied adding and removing tasks from
+                <strong>local Storage</strong>.
+              </p>
+              <a
+                href="https://github.com/Strevitz/todo-list-maker"
+                target="_blank"
+                ><p>see code</p></a
+              >
+              <label for="page7cb" title="Start"><b>next project</b></label>
+            </div>
+          </page>
+          <!-- page 7 -->
+          <page id="page7">
+            <div class="portfolio-img">
+              <a href="img/tabuli.png" target="_blank"
+                ><img src="img/tabuli.png" alt=""
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Restaurant Website</h4>
+              <p class="portfolio-text">
+                Small and funny website for a small vegetarian restaurant.<br />
+                Website created with <strong>passion</strong> in
+                <strong>HTML/CSS/JSS</strong> (jQuery).<br />
+                The theme of the app's design was the
+                <strong>colors of Lebanese cuisine</strong>, which will
+                certainly affect you appetite.
+              </p>
+              <a
+                href="https://github.com/Strevitz/tabuli-restaurant"
+                target="_blank"
+                ><p>see code</p></a
+              >
+              <label for="page1cb" title="That's all folks!"
+                ><b>start again?</b></label
+              >
+            </div>
+          </page>
+        </carousel>
+      </section>
 
       <section data-index="2" class="contact">
         <!-- linkedin  -->
-        <h3 class="linkedin">in</h3>
+        <a
+          href="https://www.linkedin.com/in/strzewiczek/"
+          title="check out my linkedin profile"
+          target="_blank"
+          ><h3 class="linkedin">in</h3></a
+        >
         <svg
           class="linkedin-triangle"
           width="80"
@@ -145,8 +393,11 @@
 
         <h2 id="headline3">contact</h2>
 
-        <div class="contact-box">
-          <div class="form">
+        <div class="contact-box" id="contact-box">
+          <form
+            method="POST"
+            action="https://api.slapform.com/arthur.strzewiczek@gmail.com"
+          >
             <div class="name-form">
               <input type="text" name="name" autocomplete="off" required />
               <label for="name" class="label-name">
@@ -155,33 +406,53 @@
             </div>
 
             <div class="name-form">
-              <input type="text" name="name" autocomplete="off" required />
+              <input type="number" name="phone" autocomplete="off" required />
               <label for="name" class="label-name">
                 <span class="content-name">tel</span>
               </label>
             </div>
 
             <div class="name-form">
-              <input type="text" name="name" autocomplete="off" required />
+              <input type="email" name="email" autocomplete="off" required />
               <label for="name" class="label-name">
                 <span class="content-name">e-mail</span>
               </label>
             </div>
 
             <div class="name-form">
-              <input type="textarea" name="name" autocomplete="off" required />
+              <input
+                type="textarea"
+                name="message"
+                autocomplete="off"
+                required
+              />
               <label for="name" class="label-name">
                 <span class="content-name">message</span>
               </label>
             </div>
             <button class="btn btn-warning mt-3">submit</button>
-          </div>
+          </form>
 
           <div class="contact-info">
-            <a href="#" class="contact-item">+48 519 603 221</a>
-            <a href="#" class="contact-item">arthur@strzewiczek.pl</a>
-            <a href="#" class="contact-item">Skype: arthur.strzewiczek</a>
-            <a href="#" class="contact-item">Twitter: @strzewiczek</a>
+            <a href="tel:+48-519-603-221" class="contact-item"
+              >+48 519 603 221</a
+            >
+            <a
+              href="mailto:arthur@strzewiczek.pl?subject=Wiadomość%20ze%20strony%20strzewiczek.pl&bcc=arthur.strzewiczek@gmail.com&body=Cześć Arthur,"
+              class="contact-item"
+              >arthur@strzewiczek.pl</a
+            >
+            <a
+              href="https://join.skype.com/invite/iQvZ2Btj8BS4"
+              class="contact-item"
+              >Skype: arthur.strzewiczek</a
+            >
+            <a href="https://twitter.com/arthur_strevitz" class="contact-item"
+              >Twitter: @arthur_strevitz</a
+            >
+            <a href="https://codepen.io/strevitz" class="contact-item"
+              >codepen: @strevitz</a
+            >
           </div>
         </div>
       </section>
@@ -213,8 +484,11 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
     <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-    <script src="js/content.js"></script>
     <script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slapform"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/content.js"></script>
   </body>
 </html>

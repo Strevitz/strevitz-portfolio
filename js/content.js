@@ -118,3 +118,169 @@ hamburger.addEventListener("click", () => {
     link.classList.toggle("fade");
   });
 });
+
+// slider
+
+// typing text
+
+var TxtRotate = function (el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = "";
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function () {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) {
+    delta /= 2;
+  }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function () {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function () {
+  var elements = document.getElementsByClassName("txt-rotate");
+  for (var i = 0; i < elements.length; i++) {
+    var toRotate = elements[i].getAttribute("data-rotate");
+    var period = elements[i].getAttribute("data-period");
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+
+// form submitting
+var slapform = new Slapform(); // The script above exposes the global variable 'Slapform'
+slapform
+  .submit({
+    account: "arthur.strzewiczek@gmail.com", // Replace this with the email that submissions should be sent to
+    data: {
+      // The data you want submitted and emailed to you
+      name: "Jon Snow",
+      phone: 666666666,
+      email: "jan@kowalski.com",
+      message: "Hello World!",
+    },
+  })
+  .success(function (response, data) {
+    // This function runs only on success
+    console.log("Success!", response, data);
+  })
+  .error(function (response, error) {
+    // This function runs only on error
+    console.log("Fail!", response, error);
+  })
+  .always(function (response) {
+    // This function runs regardless of success or error
+    console.log("Sent!", response);
+  });
+
+// cookies compliance message
+
+(function () {
+  //Change these values
+  var msg =
+    "We use cookies to enhance your web browsing experience. By continuing to browse the site you agree to our policy on cookie usage.";
+  var closeBtnMsg = "OK";
+  var privacyBtnMsg = "Privacy Policy";
+  var privacyLink = "https://strzewiczek.pl";
+
+  //check cookies
+  if (document.cookie) {
+    var cookieString = document.cookie;
+    var cookieList = cookieString.split(";");
+    // if cookie named OKCookie is found, return
+    for (x = 0; x < cookieList.length; x++) {
+      if (cookieList[x].indexOf("OKCookie") != -1) {
+        return;
+      }
+    }
+  }
+
+  var docRoot = document.body;
+  var okC = document.createElement("div");
+  okC.setAttribute("id", "okCookie");
+  var okCp = document.createElement("p");
+  var okcText = document.createTextNode(msg);
+
+  //close button
+  var okCclose = document.createElement("a");
+  var okcCloseText = document.createTextNode(closeBtnMsg);
+  okCclose.setAttribute("href", "#");
+  okCclose.setAttribute("id", "okClose");
+  okCclose.appendChild(okcCloseText);
+  okCclose.addEventListener("click", closeCookie, false);
+
+  //privacy button
+  var okCprivacy = document.createElement("a");
+  var okcPrivacyText = document.createTextNode(privacyBtnMsg);
+  okCprivacy.setAttribute("href", privacyLink);
+  okCprivacy.setAttribute("id", "okCprivacy");
+  okCprivacy.appendChild(okcPrivacyText);
+
+  //add to DOM
+  okCp.appendChild(okcText);
+  okC.appendChild(okCp);
+  okC.appendChild(okCclose);
+  okC.appendChild(okCprivacy);
+  docRoot.appendChild(okC);
+
+  okC.classList.add("okcBeginAnimate");
+
+  function closeCookie() {
+    var cookieExpire = new Date();
+    cookieExpire.setFullYear(cookieExpire.getFullYear() + 2);
+    document.cookie = "OKCookie=1; expires=" + cookieExpire.toGMTString() + ";";
+    docRoot.removeChild(okC);
+  }
+})();
+
+// scroll
+
+jQuery(function ($) {
+  //reset scroll
+  $.scrollTo(0);
+
+  $("#link1").click(function () {
+    $.scrollTo($("#headline1"), 500);
+  });
+  $("#link2").click(function () {
+    $.scrollTo($("#github-corner"), 500);
+  });
+  $("#link3").click(function () {
+    $.scrollTo($("#contact-box"), 500);
+  });
+});
