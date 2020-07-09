@@ -1,3 +1,18 @@
+<?php
+
+$to = 'arthur@strzewiczek.pl';
+$name = $_POST["name"];
+$phone = $_POST["phone"];
+$email =  $_POST["email"];
+$subject = 'New message from ' . $name . ' (' . $email . ', tel.' . $phone . ')';
+$message = $_POST['message'];
+$headers = 'From: ' . $name . '(' . $email . ')';
+$headers .= "Content-Type: text/html; charset=utf-8\r\n";
+
+mail($to, $subject, $message, $headers);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,10 +25,7 @@
 
     <title>Strzewiczek - Front-End Developer</title>
     <meta name="author" content="Arthur Strzewiczek" />
-    <meta
-      name="description"
-      content="Front-End design and coding. Clean code, excelent UX, no excuses. Check out my portfolio."
-    />
+    <meta name="description" content="Front-End design and coding. Clean code, excelent UX, no excuses. Check out my portfolio." />
     <meta
       name="keywords"
       content="javascript, html, css, scss, web deweloper, bootstrap, sketch, adobe xd, ux, ui, frontend, vanilla, react, node.js, node, php, chrome tools, Front-End, front, end"
@@ -95,17 +107,20 @@
           alt="visit me on LinkedIn"
         />
 
-        <h2 id="headline1">hello</h2>
+        <h2 id="headline1">sent</h2>
         <div class="typing">
-          <h4>hello</h4>
-          <h4 class="type-header">
-            I work with
-            <span
-              class="txt-rotate"
-              data-period="2000"
-              data-rotate='[ "HTML.", "CSS.", "JS.","jQuery.","React.","Node." , "fun!" ]'
-            ></span>
-          </h4>
+
+        <h4>Great</h4>
+        <h4 class="type-header">
+        You just sent a
+          <span
+            class="txt-rotate"
+            data-period="2000"
+            data-rotate='[ "message."]'
+          ></span>
+        </h4>
+
+
           <h5>
             My name is Arthur, as an engineer I've always been interested in
             things, especially how they work. <br />

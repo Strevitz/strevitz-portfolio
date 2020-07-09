@@ -1,4 +1,5 @@
-//nav animation
+/***********************[ Navbar animation ]***********************/
+
 const sections = document.querySelectorAll("section");
 const a = document.querySelectorAll("a");
 const bubble = document.querySelector(".bubble");
@@ -35,7 +36,8 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-// headline effects
+/***********************[ Headlines effects ]***********************/
+
 $("#headline1 #headline4").slideUp(300).delay(1000).fadeIn(600);
 
 $(document).ready(function () {
@@ -48,17 +50,19 @@ $(document).ready(function () {
   });
 
   $(window).scroll(function () {
-    if ($(document).scrollTop() > 800) {
+    if ($(document).scrollTop() > 1000) {
       $("#headline3").fadeIn(600);
     } else {
       $("#headline3").fadeOut(600);
     }
   });
 
-  //my profile picture effect
+  /***********************[ Profile picture animation ]***********************/
+
   $("#avatar").effect("slide", { direction: "up" }, 1000);
 
-  //change color of list items
+  /***********************[ Change color of list items ]***********************/
+
   $(window).scroll(function () {
     if ($(document).scrollTop() > 950) {
       $(".list-item").css("color", "#dabb0f", { duration: 200 });
@@ -67,15 +71,7 @@ $(document).ready(function () {
     }
   });
 
-  /*$(window).scroll(function() {
-      if ($(document).scrollTop() > 400) {
-        $('.circle1b, #github').effect("slide", {direction: "up"}, 800);
-      } else {
-          $('.circle1b, #github').hide();
-      }
-  });
-  */
-
+  /***********************[ Cursor sign ]***********************/
   /*
   let mouseCursor = document.querySelector('.cursor');
   window.addEventListener('mousemove', cursor);
@@ -107,7 +103,8 @@ $(document).ready(function () {
   */
 });
 
-//menu effect
+/***********************[ Menu animation ]***********************/
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
@@ -119,9 +116,7 @@ hamburger.addEventListener("click", () => {
   });
 });
 
-// slider
-
-// typing text
+/***********************[ Typing text hero ]***********************/
 
 var TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
@@ -182,33 +177,7 @@ window.onload = function () {
   document.body.appendChild(css);
 };
 
-// form submitting
-var slapform = new Slapform(); // The script above exposes the global variable 'Slapform'
-slapform
-  .submit({
-    account: "arthur.strzewiczek@gmail.com", // Replace this with the email that submissions should be sent to
-    data: {
-      // The data you want submitted and emailed to you
-      name: "Jon Snow",
-      phone: 666666666,
-      email: "jan@kowalski.com",
-      message: "Hello World!",
-    },
-  })
-  .success(function (response, data) {
-    // This function runs only on success
-    console.log("Success!", response, data);
-  })
-  .error(function (response, error) {
-    // This function runs only on error
-    console.log("Fail!", response, error);
-  })
-  .always(function (response) {
-    // This function runs regardless of success or error
-    console.log("Sent!", response);
-  });
-
-// cookies compliance message
+/***********************[ Cookies compliance message ]***********************/
 
 (function () {
   //Change these values
@@ -268,7 +237,7 @@ slapform
   }
 })();
 
-// scroll
+/***********************[ animated scroll ]***********************/
 
 jQuery(function ($) {
   //reset scroll

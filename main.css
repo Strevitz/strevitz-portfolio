@@ -84,41 +84,6 @@ nav a:hover {
   border: 1px solid black;
 }
 
-/*
-.hamburger{
-    width: 40px;
-    height: 35px;
-    border: 0;
-    border-top: 5px solid rgb(0, 0, 0);
-    background: transparent;
-    position: relative;
-    transition: 0.3s transform linear;
-}
-
-.hamburger::before, .hamburger::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-top: 5px solid rgb(0, 0, 0);
-    transform: translateY(10px);
-}
-
-.hamburger::after{
-    transform: translateY(25px);
-    transition: 0.3s transform linear;
-}
-
-.hamburger:focus{
-    transform: rotate(45deg) translateY(5px);
-    border: none;
-}
-
-.hamburger:focus::after{
-    transform: rotate(-90deg) translateX(-10px);
-}
-*/
 /***********************[ Nav Brand ]***********************/
 span {
   margin-left: 6px;
@@ -140,7 +105,6 @@ span {
   height: 40px;
 }
 
-/***********************[ Carousel ]***********************/
 /***********************[ Cursor ]***********************/
 /*
 .cursor{
@@ -509,154 +473,6 @@ button {
           align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  #avatar {
-    display: none !important;
-  }
-  .home {
-    height: 130vh;
-  }
-  .typing {
-    margin-right: 1rem !important;
-    top: 8% !important;
-    left: 8%;
-  }
-  .project {
-    height: 145vh;
-    text-align: left;
-  }
-  page {
-    margin-top: 1rem;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    text-align: left;
-  }
-  .portfolio-img {
-    text-align: center;
-  }
-  .portfolio-img img {
-    width: 100% !important;
-  }
-  .portfolio-description {
-    margin-left: 0 !important;
-  }
-  .portfolio-header {
-    margin-top: 1rem !important;
-  }
-  .portfolio-text {
-    font-size: 1.3rem !important;
-  }
-  h4 {
-    font-size: 2rem !important;
-  }
-  #headline1 {
-    font-size: 6rem;
-    top: 4%;
-    left: 12%;
-    -webkit-transform: translate(0%, -2%);
-            transform: translate(0%, -2%);
-  }
-  .contact-info {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    margin-top: 7vh;
-    margin-bottom: 5vh;
-  }
-  .form {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin-bottom: 10vh;
-  }
-  .contact-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .line {
-    width: 30px;
-    height: 3px;
-    background: black;
-    margin: 5px;
-  }
-  nav {
-    position: relative;
-  }
-  .bubble {
-    display: none;
-  }
-  .hamburger {
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    -webkit-transform: translate(-5%, -50%);
-            transform: translate(-5%, -50%);
-    z-index: 3;
-  }
-  .nav-links {
-    position: fixed;
-    background: white;
-    height: 100vh;
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-clip-path: circle(100px at 90% -10%);
-            clip-path: circle(100px at 90% -10%);
-    -webkit-transition: all 1s ease-out;
-    transition: all 1s ease-out;
-    pointer-events: none;
-  }
-  .nav-links.open {
-    -webkit-clip-path: circle(1000px at 90% -10%);
-            clip-path: circle(1000px at 90% -10%);
-    pointer-events: all;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .nav-links li {
-    opacity: 0;
-  }
-  .nav-links li a {
-    font-size: 25px;
-  }
-  .nav-links li:nth-child(1) {
-    -webkit-transition: all 0.5s ease 0.2s;
-    transition: all 0.5s ease 0.2s;
-  }
-  .nav-links li:nth-child(2) {
-    -webkit-transition: all 0.5s ease 0.4s;
-    transition: all 0.5s ease 0.4s;
-  }
-  .nav-links li:nth-child(3) {
-    -webkit-transition: all 0.5s ease 0.5s;
-    transition: all 0.5s ease 0.5s;
-  }
-  .nav-links li:nth-child(4) {
-    -webkit-transition: all 0.5s ease 0.6s;
-    transition: all 0.5s ease 0.6s;
-  }
-  .nav-links li.fade {
-    opacity: 1;
-  }
-}
-
-:root {
-  --hue-neutral: 52;
-  --hue-wrong: 340;
-  --hue-correct: 162;
-}
-
 .quiz {
   position: relative;
   -webkit-box-orient: vertical;
@@ -826,6 +642,7 @@ h5 {
   margin-right: 3rem;
 }
 
+/***********************[ Portfolio slider ]***********************/
 carousel {
   width: 100%;
   display: block;
@@ -915,6 +732,7 @@ carousel #page7cb:checked ~ #page7 {
   margin-top: 0;
 }
 
+/***********************[ Cookies compliance message ]***********************/
 #okCookie {
   background-color: black;
   color: white;
@@ -986,5 +804,154 @@ carousel #page7cb:checked ~ #page7 {
   to {
     opacity: 1;
   }
+}
+
+/***********************[ Media responsivness ]***********************/
+@media screen and (max-width: 768px) {
+  #avatar {
+    display: none !important;
+  }
+  .home {
+    height: 130vh;
+  }
+  .typing {
+    margin-right: 1rem !important;
+    top: 8% !important;
+    left: 8%;
+  }
+  .project {
+    height: 145vh;
+    text-align: left;
+  }
+  page {
+    margin-top: 1rem;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    text-align: left;
+  }
+  .portfolio-img {
+    text-align: center;
+  }
+  .portfolio-img img {
+    width: 100% !important;
+  }
+  .portfolio-description {
+    margin-left: 0 !important;
+  }
+  .portfolio-header {
+    margin-top: 1rem !important;
+  }
+  .portfolio-text {
+    font-size: 1.3rem !important;
+  }
+  h4 {
+    font-size: 2rem !important;
+  }
+  #headline1 {
+    font-size: 6rem;
+    top: 4%;
+    left: 12%;
+    -webkit-transform: translate(0%, -2%);
+            transform: translate(0%, -2%);
+  }
+  .contact-info {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-top: 7vh;
+    margin-bottom: 5vh;
+  }
+  .form {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 10vh;
+  }
+  .contact-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .line {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+  }
+  .bubble {
+    display: none;
+  }
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 3;
+  }
+  .nav-links {
+    position: fixed;
+    background: white;
+    height: 100vh;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-clip-path: circle(100px at 90% -10%);
+            clip-path: circle(100px at 90% -10%);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    -webkit-clip-path: circle(1000px at 90% -10%);
+            clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li a {
+    font-size: 25px;
+  }
+  .nav-links li:nth-child(1) {
+    -webkit-transition: all 0.5s ease 0.2s;
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    -webkit-transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    -webkit-transition: all 0.5s ease 0.5s;
+    transition: all 0.5s ease 0.5s;
+  }
+  .nav-links li:nth-child(4) {
+    -webkit-transition: all 0.5s ease 0.6s;
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li.fade {
+    opacity: 1;
+  }
+}
+
+:root {
+  --hue-neutral: 52;
+  --hue-wrong: 340;
+  --hue-correct: 162;
 }
 /*# sourceMappingURL=main.css.map */
