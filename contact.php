@@ -11,6 +11,20 @@ $headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
 mail($to, $subject, $message, $headers);
 
+if (isset($_POST['submit'])) {
+  $secret = '6LdcC7AZAAAAAOltIqaSHYOE486I1TOQ0Gz9wJRP';
+  $response = $_POST['g-recaptcha-response'];
+  $remoteip = $_SERVER['REMOTE_ADDR'];
+
+  $url = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip");
+  $result = json_decode($url, TRUE);
+  if ($result['success'] == 1) {
+    echo 'Thank you human!';
+  }else{
+    echo 'Most likely, you are a robot!';
+  }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +61,11 @@ mail($to, $subject, $message, $headers);
       rel="stylesheet"
       href="http://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css"
     />
+    <script
+      src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async
+      defer
+    ></script>
   </head>
 
   <body>
@@ -445,6 +464,7 @@ mail($to, $subject, $message, $headers);
                 <span class="content-name">message</span>
               </label>
             </div>
+            <div id="captcha" data-callback="onloadCallback"></div>
             <button type="submit" class="btn btn-warning mt-3">submit</button>
           </form>
 

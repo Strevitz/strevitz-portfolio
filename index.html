@@ -31,10 +31,11 @@
       type="text/css"
     />
     <link rel="stylesheet" href="main.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="http://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css"
-    />
+    <script
+      src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async
+      defer
+    ></script>
   </head>
 
   <body>
@@ -195,7 +196,7 @@
           <page id="page1">
             <div class="portfolio-img">
               <a href="img/coronavirus.png" target="_blank"
-                ><img src="img/coronavirus.png" alt=""
+                ><img src="img/coronavirus.png" alt="Coronavirus Stats App"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -222,7 +223,7 @@
           <page id="page2">
             <div class="portfolio-img">
               <a href="img/barber.png" target="_blank"
-                ><img src="img/barber.png" alt=""
+                ><img src="img/barber.png" alt="Barbershop"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -251,7 +252,7 @@
           <page id="page3">
             <div class="portfolio-img">
               <a href="img/architecture.png" target="_blank"
-                ><img src="img/architecture.png" alt=""
+                ><img src="img/architecture.png" alt="AOS Architecture"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -279,7 +280,7 @@
           <page id="page4">
             <div class="portfolio-img">
               <a href="img/california.png" target="_blank"
-                ><img src="img/california.png" alt=""
+                ><img src="img/california.png" alt="Golden State"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -303,7 +304,7 @@
           <page id="page5">
             <div class="portfolio-img">
               <a href="img/blackjack.png" target="_blank"
-                ><img src="img/blackjack.png" alt=""
+                ><img src="img/blackjack.png" alt="BlackJack"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -325,7 +326,7 @@
           <page id="page6">
             <div class="portfolio-img">
               <a href="img/todo.png" target="_blank"
-                ><img src="img/todo.png" alt=""
+                ><img src="img/todo.png" alt="Todo List Maker"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -350,7 +351,7 @@
           <page id="page7">
             <div class="portfolio-img">
               <a href="img/tabuli.png" target="_blank"
-                ><img src="img/tabuli.png" alt=""
+                ><img src="img/tabuli.png" alt="Tabuli Restaurant"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -397,7 +398,7 @@
         <h2 id="headline3">contact</h2>
 
         <div class="contact-box" id="contact-box">
-          <form action="contact.php" method="POST">
+          <form id="form" action="contact.php" method="POST">
             <div class="name-form">
               <input type="text" name="name" autocomplete="off" required />
               <label for="name" class="label-name">
@@ -430,7 +431,10 @@
                 <span class="content-name">message</span>
               </label>
             </div>
-            <button type="submit" class="btn btn-warning mt-3">submit</button>
+            <div id="captcha" data-callback="onloadCallback"></div>
+            <button type="submit" class="btn btn-warning mt-3">
+              submit
+            </button>
           </form>
 
           <div class="contact-info">
@@ -486,8 +490,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
     <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slapform"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/content.js"></script>
   </body>

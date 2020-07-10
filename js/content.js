@@ -253,3 +253,14 @@ jQuery(function ($) {
     $.scrollTo($("#contact-box"), 500);
   });
 });
+
+// recaptcha
+
+window.onloadCallback = onloadCallback;
+
+var onloadCallback = function () {
+  grecaptcha.render("captcha", {
+    sitekey: "6Lc9ArAZAAAAAEaBFpSIh2vng-r3SdHccKA4aigp",
+    theme: "dark",
+  });
+};
