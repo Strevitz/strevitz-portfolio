@@ -940,15 +940,15 @@ carousel #page7cb:checked ~ #page7 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    clip-path: circle(100px at 90% -10%);
-    -webkit-clip-path: circle(100px at 90% -10%);
+    clip-path: circle(10px at 90% -10%);
+    -webkit-clip-path: circle(10px at 90% -10%);
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
     pointer-events: none;
   }
   .nav-links.open {
     clip-path: circle(1000px at 90% -10%);
-    -webkit-clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1350px at 90% -10%);
     pointer-events: all;
     -webkit-box-align: center;
         -ms-flex-align: center;
