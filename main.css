@@ -31,9 +31,6 @@ nav {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 nav h1 {
@@ -226,7 +223,7 @@ footer {
   text-align: center;
   color: white;
   font-size: 0.7rem;
-  padding-bottom: 30px;
+  padding: 30px;
 }
 
 /***********************[ Sections ]***********************/
@@ -303,6 +300,7 @@ section h2 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 #headline3 {
@@ -400,6 +398,7 @@ form {
 button {
   -ms-flex-item-align: start;
       align-self: flex-start;
+  width: 80%;
 }
 
 .btn-warning {
@@ -444,12 +443,16 @@ button {
   color: white;
   line-height: 3rem;
   width: 100%;
+  margin-left: 4rem;
+  margin-top: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -589,7 +592,7 @@ body.wrong {
 }
 
 .quiz-footer {
-  padding: 0;
+  padding: 6rem 0 1rem;
 }
 
 .footer-text-box {
@@ -623,6 +626,10 @@ h4 {
 h5 {
   color: #333333;
   font-size: 1.5em;
+}
+
+h6 {
+  font-size: 0.8rem;
 }
 
 .typing {
@@ -786,6 +793,25 @@ carousel #page7cb:checked ~ #page7 {
   animation: myfirst 2s;
 }
 
+/***********************[ weather forecast ]***********************/
+.weather-form {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  z-index: 4 !important;
+}
+
+.weather-form input {
+  padding: 5px 8px !important;
+  border-radius: 8px !important;
+}
+
+.App {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /* Chrome, Safari, Opera */
 @-webkit-keyframes myfirst {
   from {
@@ -860,6 +886,7 @@ carousel #page7cb:checked ~ #page7 {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    margin-left: 0;
     margin-top: 7vh;
     margin-bottom: 5vh;
   }
@@ -887,6 +914,11 @@ carousel #page7cb:checked ~ #page7 {
   nav {
     position: relative;
   }
+  ul {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
   .bubble {
     display: none;
   }
@@ -908,44 +940,31 @@ carousel #page7cb:checked ~ #page7 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
     -webkit-clip-path: circle(100px at 90% -10%);
-            clip-path: circle(100px at 90% -10%);
     -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
     pointer-events: none;
   }
   .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
     -webkit-clip-path: circle(1000px at 90% -10%);
-            clip-path: circle(1000px at 90% -10%);
     pointer-events: all;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .nav-links li {
-    opacity: 0;
+    opacity: 1;
+    padding: 1.5rem 0;
   }
   .nav-links li a {
     font-size: 25px;
   }
-  .nav-links li:nth-child(1) {
-    -webkit-transition: all 0.5s ease 0.2s;
-    transition: all 0.5s ease 0.2s;
-  }
-  .nav-links li:nth-child(2) {
-    -webkit-transition: all 0.5s ease 0.4s;
-    transition: all 0.5s ease 0.4s;
-  }
-  .nav-links li:nth-child(3) {
-    -webkit-transition: all 0.5s ease 0.5s;
-    transition: all 0.5s ease 0.5s;
-  }
-  .nav-links li:nth-child(4) {
-    -webkit-transition: all 0.5s ease 0.6s;
-    transition: all 0.5s ease 0.6s;
-  }
-  .nav-links li.fade {
-    opacity: 1;
+  .weather-form {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
   }
 }
 

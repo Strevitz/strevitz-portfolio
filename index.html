@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="img/wink2.jpg" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
@@ -35,6 +36,10 @@
       src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
       async
       defer
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/bdf3eade00.js"
+      crossorigin="anonymous"
     ></script>
   </head>
 
@@ -81,7 +86,14 @@
             >
           </li>
           <li>
-            <a class="list-item" data-page="quiz" href="quiz.html">quiz!</a>
+            <a class="list-item" data-page="quiz" href="quiz.html"
+              ><i class="fas fa-question-circle"></i
+            ></a>
+          </li>
+          <li>
+            <a class="list-item" data-page="weather" href="weather.html"
+              ><i class="fas fa-cloud-sun-rain"></i
+            ></a>
           </li>
           <div class="bubble"></div>
         </ul>
@@ -195,6 +207,33 @@
           <!-- page 1 -->
           <page id="page1">
             <div class="portfolio-img">
+              <a href="img/vinyl-screenshot.png" target="_blank"
+                ><img
+                  src="img/vinyl-screenshot.png"
+                  alt="Vinyl ecommerce website"
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Vinyl e-commerce website</h4>
+              <p class="portfolio-text">
+                Simple and elegant e-commerce website with best vinyl discs ever
+                made.<br />
+                Designed in <strong>React</strong> with a little bit of
+                <strong>CSS.</strong><br />
+                Data are applied with <strong>Context API.</strong>
+                The website has also full functional basket with card payment
+                system.
+              </p>
+              <a href="https://vinyl.netlify.app/" target="_blank"
+                ><p>see website</p></a
+              >
+              <label for="page2cb" title="Start"><b>next project</b></label>
+            </div>
+          </page>
+
+          <!-- page 2 -->
+          <page id="page2">
+            <div class="portfolio-img">
               <a href="img/coronavirus.png" target="_blank"
                 ><img src="img/coronavirus.png" alt="Coronavirus Stats App"
               /></a>
@@ -216,11 +255,11 @@
                 target="_blank"
                 ><p>see code</p></a
               >
-              <label for="page2cb" title="Start"><b>next project</b></label>
+              <label for="page3cb" title="Start"><b>next project</b></label>
             </div>
           </page>
-          <!-- page 2 -->
-          <page id="page2">
+          <!-- page 3 -->
+          <page id="page3">
             <div class="portfolio-img">
               <a href="img/barber.png" target="_blank"
                 ><img src="img/barber.png" alt="Barbershop"
@@ -242,14 +281,11 @@
               <a href="https://github.com/Strevitz/barber-shop" target="_blank"
                 ><p>see code</p></a
               >
-              <a href="https://strzewic.vot.pl" target="_blank"
-                ><p>see website</p></a
-              >
-              <label for="page3cb" title="Start"><b>next project</b></label>
+              <label for="page4cb" title="Start"><b>next project</b></label>
             </div>
           </page>
-          <!-- page 3 -->
-          <page id="page3">
+          <!-- page 4 -->
+          <page id="page4">
             <div class="portfolio-img">
               <a href="img/architecture.png" target="_blank"
                 ><img src="img/architecture.png" alt="AOS Architecture"
@@ -273,11 +309,11 @@
                 target="_blank"
                 ><p>see code</p></a
               >
-              <label for="page4cb" title="Start"><b>next project</b></label>
+              <label for="page5cb" title="Start"><b>next project</b></label>
             </div>
           </page>
-          <!-- page 4 -->
-          <page id="page4">
+          <!-- page 5 -->
+          <page id="page5">
             <div class="portfolio-img">
               <a href="img/california.png" target="_blank"
                 ><img src="img/california.png" alt="Golden State"
@@ -297,11 +333,11 @@
                 target="_blank"
                 ><p>see code</p></a
               >
-              <label for="page5cb" title="Start"><b>next project</b></label>
+              <label for="page6cb" title="Start"><b>next project</b></label>
             </div>
           </page>
-          <!-- page 5 -->
-          <page id="page5">
+          <!-- page 6 -->
+          <page id="page6">
             <div class="portfolio-img">
               <a href="img/blackjack.png" target="_blank"
                 ><img src="img/blackjack.png" alt="BlackJack"
@@ -319,34 +355,10 @@
               <a href="https://github.com/Strevitz/blackjack" target="_blank"
                 ><p>see code</p></a
               >
-              <label for="page6cb" title="Start"><b>next project</b></label>
-            </div>
-          </page>
-          <!-- page 6 -->
-          <page id="page6">
-            <div class="portfolio-img">
-              <a href="img/todo.png" target="_blank"
-                ><img src="img/todo.png" alt="Todo List Maker"
-              /></a>
-            </div>
-            <div class="portfolio-description">
-              <h4 class="portfolio-header">Todo List JS App</h4>
-              <p class="portfolio-text">
-                Simple and elegant application to create To do lists.<br />
-                Designed in <strong>HTML/CSS</strong> and mostly in
-                <strong>JS</strong> with the ability to filter the list among
-                completed, uncompleted and all tasks. <br />
-                The app has also applied adding and removing tasks from
-                <strong>local Storage</strong>.
-              </p>
-              <a
-                href="https://github.com/Strevitz/todo-list-maker"
-                target="_blank"
-                ><p>see code</p></a
-              >
               <label for="page7cb" title="Start"><b>next project</b></label>
             </div>
           </page>
+
           <!-- page 7 -->
           <page id="page7">
             <div class="portfolio-img">
@@ -431,7 +443,12 @@
                 <span class="content-name">message</span>
               </label>
             </div>
-            <div id="captcha" data-callback="onloadCallback"></div>
+            <div id="captcha" class="my-4" data-callback="onloadCallback"></div>
+            <h6 class="text-light w-75">
+              Using the contact form you agree to the processing of input data
+              in it, personal data, to handle the inquiry, including contact
+              with you via email.
+            </h6>
             <button type="submit" class="btn btn-warning mt-3">
               submit
             </button>
@@ -463,10 +480,10 @@
 
       <footer class="quiz-footer">
         <div class="footer-text-box">
-          <span
-            >Thank you for your visit my gorgeous friends! &copy; 2020 Arthur
-            Strzewiczek</span
-          >
+          <h6>
+            Thank you for your visit my gorgeous friends! &copy; 2020 Arthur
+            Strzewiczek
+          </h6>
         </div>
       </footer>
     </main>

@@ -464,8 +464,15 @@ if (isset($_POST['submit'])) {
                 <span class="content-name">message</span>
               </label>
             </div>
-            <div id="captcha" data-callback="onloadCallback"></div>
-            <button type="submit" class="btn btn-warning mt-3">submit</button>
+            <div id="captcha" class="my-4" data-callback="onloadCallback"></div>
+            <h6 class="text-light w-75">
+              Using the contact form you agree to the processing of input data
+              in it, personal data, to handle the inquiry, including contact
+              with you via email.
+            </h6>
+            <button type="submit" class="btn btn-warning mt-3">
+              submit
+            </button>
           </form>
 
           <div class="contact-info">

@@ -1,4 +1,4 @@
-/***********************[ Navbar animation ]***********************/
+/***********************[ Navbar bubble animation ]***********************/
 
 const sections = document.querySelectorAll("section");
 const a = document.querySelectorAll("a");
@@ -111,9 +111,10 @@ const links = document.querySelectorAll(".nav-links li");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
-  links.forEach((link) => {
-    link.classList.toggle("fade");
-  });
+});
+
+$(links).click(function () {
+  $(navLinks).removeClass("open");
 });
 
 /***********************[ Typing text hero ]***********************/

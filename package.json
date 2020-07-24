@@ -2,7 +2,7 @@
   "name": "strona-portfolio",
   "version": "1.0.0",
   "description": "Website with my web development portfolio",
-  "main": "index.js",
+  "main": "content.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
