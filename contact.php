@@ -58,13 +58,17 @@ if (isset($_POST['submit'])) {
     />
     <link rel="stylesheet" href="main.css" type="text/css" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
-      href="http://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css"
     />
     <script
       src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
       async
       defer
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/bdf3eade00.js"
+      crossorigin="anonymous"
     ></script>
   </head>
 
@@ -78,13 +82,8 @@ if (isset($_POST['submit'])) {
           <div class="line"></div>
           <div class="line"></div>
         </div>
-        <h1 class="ml-3">
-          <a href="index.html"
-            ><img class="static" src="img/wink2.jpg" /><img
-              class="active"
-              src="img/wink.gif"
-            /><span>strzewiczek</span></a
-          >
+        <h1 class="ml-3 mt-1">
+          <a href="index.html"><span class="logo-text">strzewiczek</span></a>
         </h1>
         <ul class="nav-links">
           <li>
@@ -111,7 +110,14 @@ if (isset($_POST['submit'])) {
             >
           </li>
           <li>
-            <a class="list-item" data-page="quiz" href="quiz.html">quiz!</a>
+            <a class="list-item" data-page="quiz" href="quiz.html"
+              ><i class="fas fa-question-circle"></i
+            ></a>
+          </li>
+          <li>
+            <a class="list-item" data-page="weather" href="weather.html"
+              ><i class="fas fa-cloud-sun-rain"></i
+            ></a>
           </li>
           <div class="bubble"></div>
         </ul>
@@ -495,16 +501,23 @@ if (isset($_POST['submit'])) {
             <a href="https://codepen.io/strevitz" class="contact-item"
               >codepen: @strevitz</a
             >
+            <a
+              href="https://strevitz-chat.netlify.app"
+              target="_blank"
+              class="contact-item my-4"
+              >or live chat <i class="fa fa-comments h1" aria-hidden="true"></i
+            ></a>
           </div>
         </div>
       </section>
 
       <footer class="quiz-footer">
-        <div class="footer-text-box">
-          <span
-            >Thank you for your visit my gorgeous friends! &copy; 2020 Arthur
-            Strzewiczek</span
-          >
+        <div class="footer-text-box d-flex flex-column mb-4">
+          <span class="logo-text">strzewiczek</span>
+          <h6>
+            Thank you for your visit my gorgeous friends! &copy; 2020 Arthur
+            Strzewiczek
+          </h6>
         </div>
       </footer>
     </main>

@@ -3,7 +3,7 @@
 const sections = document.querySelectorAll("section");
 const a = document.querySelectorAll("a");
 const bubble = document.querySelector(".bubble");
-const gradients = ["#ffdf2c", "white", "black"];
+const gradients = ["white", "#18c9e0", "white"];
 const options = {
   threshold: 0.7,
 };
@@ -63,13 +63,15 @@ $(document).ready(function () {
 
   /***********************[ Change color of list items ]***********************/
 
-  $(window).scroll(function () {
+  /*$(window).scroll(function () {
     if ($(document).scrollTop() > 950) {
       $(".list-item").css("color", "#dabb0f", { duration: 200 });
     } else {
       $(".list-item").css("color", "black");
     }
   });
+
+  */
 
   /***********************[ Cursor sign ]***********************/
   /*

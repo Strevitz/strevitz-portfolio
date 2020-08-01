@@ -85,10 +85,10 @@
 
     <main>
       <section data-index="0" class="quiz">
-        <h3>weather forecast</h3>
-        <h2 id="headline4">weather</h2>
+        <h3>currency</h3>
+        <h2 id="headline4">currency</h2>
 
-        <div id="weather"></div>
+        <div id="currency"></div>
       </section>
 
       <footer class="quiz-footer">
@@ -139,12 +139,11 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <!-- Załaduj nasz komponent reactowy. -->
-    <script type="text/babel" src="weather-react/App.js"></script>
-    <script type="text/babel" src="weather-react/Form.jsx"></script>
-    <script type="text/babel" src="weather-react/Result.jsx"></script>
+    <script type="text/babel" src="currency-react/App.js"></script>
+    <script type="text/babel" src="currency-react/CurrencyRow.jsx"></script>
 
     <script type="text/babel">
-      ReactDOM.render(<App />, document.querySelector("#weather"));
+      ReactDOM.render(<App />, document.querySelector("#currency"));
     </script>
   </body>
 </html>

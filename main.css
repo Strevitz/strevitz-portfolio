@@ -8,6 +8,10 @@ $primary-font: ;*/
           box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 /***********************[ Header ]***********************/
 header {
   -webkit-box-shadow: 0px 2px 14px 0px #0f0f0f75;
@@ -18,6 +22,12 @@ header {
   background: white;
   z-index: 9;
   overflow: hidden;
+}
+
+.logo-text {
+  font-family: "Pacifico", cursive;
+  color: #18c9e0;
+  font-size: 1.8rem;
 }
 
 nav {
@@ -66,40 +76,24 @@ nav a {
 
 nav a:hover {
   text-decoration: none;
-  color: #666666 !important;
+  color: #18c9e0 !important;
 }
 
 .bubble {
   position: absolute;
-  z-index: -2;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  z-index: -1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  border-radius: 8%;
+  border-radius: 6%;
   margin-top: 2px;
-  border: 1px solid black;
+  border: 1px solid #18c9e0;
 }
 
 /***********************[ Nav Brand ]***********************/
 span {
   margin-left: 6px;
-}
-
-.static {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  background: white;
-}
-
-.static:hover {
-  opacity: 0;
-}
-
-.active {
-  width: 40px;
-  height: 40px;
 }
 
 /***********************[ Cursor ]***********************/
@@ -330,7 +324,7 @@ form {
 }
 
 .name-form {
-  width: 80%;
+  width: 100%;
   height: 67px;
   position: relative;
   overflow: hidden;
@@ -398,11 +392,12 @@ form {
 button {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  width: 80%;
+  width: 100%;
 }
 
 .btn-warning {
   background-color: #ffdd00;
+  border-radius: 6px !important;
 }
 
 /***********************[ Contact links ]***********************/
@@ -681,8 +676,7 @@ carousel page label {
   cursor: pointer;
   background: #ffdd00;
   padding: 4px 10px;
-  border: 1px solid black;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 carousel #page1cb:checked ~ #page1 {
@@ -739,6 +733,11 @@ carousel #page7cb:checked ~ #page7 {
   margin-top: 0;
 }
 
+.portfolio-description a {
+  color: #18c9e0;
+  text-decoration: none;
+}
+
 /***********************[ Cookies compliance message ]***********************/
 #okCookie {
   background-color: black;
@@ -793,7 +792,7 @@ carousel #page7cb:checked ~ #page7 {
   animation: myfirst 2s;
 }
 
-/***********************[ weather forecast ]***********************/
+/***********************[ weather forecast & currency converter ]***********************/
 .weather-form {
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
@@ -801,9 +800,21 @@ carousel #page7cb:checked ~ #page7 {
   z-index: 4 !important;
 }
 
-.weather-form input {
+.weather-form input,
+.currency-input,
+.currency-select {
   padding: 5px 8px !important;
   border-radius: 8px !important;
+}
+
+.currency-select {
+  background: #000;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.equals {
+  font-size: 2rem;
 }
 
 .App {
