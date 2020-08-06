@@ -164,7 +164,15 @@
           </svg>
         </a>
 
-        <carousel id="carousel">
+        <h4 class="project-headline">projects</h4>
+
+        <img
+          class="smiley-img"
+          src="img/toppng.com-happy-face-png-smiley-1023x1012.png"
+          alt="smiley"
+        />
+
+        <carousel id="carousel" class="carousel">
           <input
             type="radio"
             id="page1cb"
@@ -208,13 +216,39 @@
             name="pages"
             style="display: none;"
           />
+
           <!-- page 1 -->
           <page id="page1">
             <div class="portfolio-img">
-              <a href="img/vinyl-screenshot.png" target="_blank"
+              <a href="img/chakra-presentation-full.png" target="_blank"
                 ><img
-                  src="img/vinyl-screenshot.png"
-                  alt="Vinyl ecommerce website"
+                  src="img/chakra-presentation-full.png"
+                  alt="Chakra Gatsby Website"
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Chakra Gatsby Website</h4>
+              <p class="portfolio-text">
+                This frontend application is perfect to present product or
+                servicein simple and direct way for customer.<br />In the first
+                place in the vicinity, the customer notes the possibility of
+                booking first yoga classes and learns product specifications.<br />The
+                Chakra website was written in <strong>Gatsby JS</strong>.
+              </p>
+              <a href="https://chakra-studio.netlify.app/" target="_blank"
+                ><p>live</p></a
+              >
+              <label for="page2cb" title="Start"><b>next project</b></label>
+            </div>
+          </page>
+
+          <!-- page 2 -->
+          <page id="page2">
+            <div class="portfolio-img">
+              <a href="img/vinyl-laptop-full-presentation.png" target="_blank"
+                ><img
+                  src="img/vinyl-laptop-full-presentation.png"
+                  alt="Vinyl E-commerce Website"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -229,17 +263,19 @@
                 system.
               </p>
               <a href="https://vinyl.netlify.app/" target="_blank"
-                ><p>see website</p></a
+                ><p>live</p></a
               >
-              <label for="page2cb" title="Start"><b>next project</b></label>
+              <label for="page3cb" title="Start"><b>next project</b></label>
             </div>
           </page>
 
-          <!-- page 2 -->
-          <page id="page2">
+          <!-- page 3 -->
+          <page id="page3">
             <div class="portfolio-img">
-              <a href="img/coronavirus.png" target="_blank"
-                ><img src="img/coronavirus.png" alt="Coronavirus Stats App"
+              <a href="img/coronavirus-full-present.png" target="_blank"
+                ><img
+                  src="img/coronavirus-full-present.png"
+                  alt="Coronavirus Stats App"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -255,25 +291,26 @@
                 <strong>Chart.js</strong>.
               </p>
               <a
-                href="https://github.com/Strevitz/coronavirus-stats-app"
+                href="https://strevitz.github.io/coronavirus-stats-app/"
                 target="_blank"
-                ><p>see code</p></a
+                ><p>live</p></a
               >
-              <label for="page3cb" title="Start"><b>next project</b></label>
+              <label for="page4cb" title="Start"><b>next project</b></label>
             </div>
           </page>
-          <!-- page 3 -->
-          <page id="page3">
+          <!-- page 4 -->
+          <page id="page4">
             <div class="portfolio-img">
-              <a href="img/barber.png" target="_blank"
-                ><img src="img/barber.png" alt="Barbershop"
+              <a href="img/barber-full-presentation.png" target="_blank"
+                ><img
+                  src="img/barber-full-presentation.png"
+                  alt="Barbershop Website"
               /></a>
             </div>
             <div class="portfolio-description">
               <h4 class="portfolio-header">Barbershop Website</h4>
               <p class="portfolio-text">
-                A website designed in HTML/SCSS/JS for new barbershop in
-                town.<br />
+                A website designed in Markups and JS.<br />
                 <strong>Bootstrap</strong>, <strong>jQuery</strong> and a little
                 bit of <strong>Vanilla JS</strong> were used in the application.
                 <br />
@@ -282,36 +319,8 @@
                 The website contains a game created in
                 <strong>JavaScript</strong>.
               </p>
-              <a href="https://github.com/Strevitz/barber-shop" target="_blank"
-                ><p>see code</p></a
-              >
-              <label for="page4cb" title="Start"><b>next project</b></label>
-            </div>
-          </page>
-          <!-- page 4 -->
-          <page id="page4">
-            <div class="portfolio-img">
-              <a href="img/architecture.png" target="_blank"
-                ><img src="img/architecture.png" alt="AOS Architecture"
-              /></a>
-            </div>
-            <div class="portfolio-description">
-              <h4 class="portfolio-header">Architecture Studio Website</h4>
-              <p class="portfolio-text">
-                Simple website for my architectural studio. <br />
-                Clean white and navy blue colors are associated with
-                professionalism and robustness. <br />
-                Mostly done to show my architectural designs and technical
-                drawings portfolio. <br />
-                App created with <strong>HTML/CSS/JS</strong> (mostly
-                <strong>jQuery</strong>). I used <strong>jQuery UI</strong> to
-                create tabs, and pure <strong>jQuery</strong> to implement
-                movement into app.
-              </p>
-              <a
-                href="https://github.com/Strevitz/aos-architecture"
-                target="_blank"
-                ><p>see code</p></a
+              <a href="https://strevitz.github.io/barber-shop/" target="_blank"
+                ><p>live</p></a
               >
               <label for="page5cb" title="Start"><b>next project</b></label>
             </div>
@@ -319,23 +328,20 @@
           <!-- page 5 -->
           <page id="page5">
             <div class="portfolio-img">
-              <a href="img/california.png" target="_blank"
-                ><img src="img/california.png" alt="Golden State"
+              <a href="img/chat-laptop-full.png" target="_blank"
+                ><img src="img/chat-laptop-full.png" alt="Chat App"
               /></a>
             </div>
             <div class="portfolio-description">
-              <h4 class="portfolio-header">Blog Website</h4>
+              <h4 class="portfolio-header">Chat React&Node App</h4>
               <p class="portfolio-text">
-                A classic blog website with subpages dedicated for highlights of
-                the best spots in California and my one and a half year stay in
-                <strong>Golden State</strong>.<br />
-                App created with <strong>HTML/CSS/JS</strong> and
-                <strong>jQuery</strong> as cherry on the top the website.
+                Live chat app created to stay in touch!<br />
+                Front-End of chat app created in React.<br />Back-End written
+                with Socket.io, Node and Express.<br />Front-End deployed in
+                Netlify and Back-End deployed in Heroku.
               </p>
-              <a
-                href="https://github.com/Strevitz/moja-kalifornia"
-                target="_blank"
-                ><p>see code</p></a
+              <a href="https://strevitz-chat.netlify.app/" target="_blank"
+                ><p>live</p></a
               >
               <label for="page6cb" title="Start"><b>next project</b></label>
             </div>
@@ -343,31 +349,8 @@
           <!-- page 6 -->
           <page id="page6">
             <div class="portfolio-img">
-              <a href="img/blackjack.png" target="_blank"
-                ><img src="img/blackjack.png" alt="BlackJack"
-              /></a>
-            </div>
-            <div class="portfolio-description">
-              <h4 class="portfolio-header">Blackjack JS Game</h4>
-              <p class="portfolio-text">
-                Great game completely made in
-                <strong>Vanilla JavaScript</strong>.<br />
-                Blackjack contains a designed <strong>interactive bot</strong>,
-                which itself makes a strategic decisions in the game.<br />
-                I also implemented a table with current results.
-              </p>
-              <a href="https://github.com/Strevitz/blackjack" target="_blank"
-                ><p>see code</p></a
-              >
-              <label for="page7cb" title="Start"><b>next project</b></label>
-            </div>
-          </page>
-
-          <!-- page 7 -->
-          <page id="page7">
-            <div class="portfolio-img">
-              <a href="img/tabuli.png" target="_blank"
-                ><img src="img/tabuli.png" alt="Tabuli Restaurant"
+              <a href="img/tabuli-full.png" target="_blank"
+                ><img src="img/tabuli-full.png" alt="Tabuli Restaurant"
               /></a>
             </div>
             <div class="portfolio-description">
@@ -381,13 +364,35 @@
                 certainly affect you appetite.
               </p>
               <a
-                href="https://github.com/Strevitz/tabuli-restaurant"
+                href="https://strevitz.github.io/tabuli-restaurant/"
                 target="_blank"
-                ><p>see code</p></a
+                ><p>live</p></a
               >
-              <label for="page1cb" title="That's all folks!"
-                ><b>start again?</b></label
+              <label for="page7cb" title="That's all folks!"
+                ><b>next project</b></label
               >
+            </div>
+          </page>
+          <!-- page 7 -->
+          <page id="page7">
+            <div class="portfolio-img">
+              <a href="img/blackjack-full.png" target="_blank"
+                ><img src="img/blackjack-full.png" alt="BlackJack"
+              /></a>
+            </div>
+            <div class="portfolio-description">
+              <h4 class="portfolio-header">Blackjack JS Game</h4>
+              <p class="portfolio-text">
+                Great game completely made in
+                <strong>Vanilla JavaScript</strong>.<br />
+                Blackjack contains a designed <strong>interactive bot</strong>,
+                which itself makes a strategic decisions in the game.<br />
+                I also implemented a table with current results.
+              </p>
+              <a href="https://strevitz.github.io/blackjack/" target="_blank"
+                ><p>live</p></a
+              >
+              <label for="page1cb" title="Start"><b>start again?</b></label>
             </div>
           </page>
         </carousel>
@@ -412,6 +417,8 @@
         </svg>
 
         <h2 id="headline3">contact</h2>
+
+        <h4 class="contact-headline">contact</h4>
 
         <div class="contact-box" id="contact-box">
           <form id="form" action="contact.php" method="POST">

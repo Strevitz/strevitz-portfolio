@@ -28,11 +28,7 @@ header {
   overflow: hidden;
 }
 
-.logo-text {
-  font-family: "Pacifico", cursive;
-  color: #18c9e0;
-  font-size: 1.8rem;
-}
+/***********************[ Navbar ]***********************/
 
 nav {
   min-height: 10vh;
@@ -69,6 +65,8 @@ nav {
   }
 }
 
+/***********************[ Navbar Bubble Effect ]***********************/
+
 .bubble {
   position: absolute;
   z-index: -1;
@@ -80,6 +78,12 @@ nav {
 }
 
 /***********************[ Nav Brand ]***********************/
+
+.logo-text {
+  font-family: "Pacifico", cursive;
+  color: #18c9e0;
+  font-size: 1.8rem;
+}
 
 span {
   margin-left: 6px;
@@ -95,7 +99,7 @@ span {
     pointer-events: none;
 }
 */
-/***********************[ social links ]***********************/
+/***********************[ Avatar Photography ]***********************/
 
 #avatar {
   position: absolute;
@@ -108,6 +112,10 @@ span {
   z-index: 2;
   @include box-shadow(0px 2px 14px 0px $shadow-color);
 }
+
+/***********************[ social links ]***********************/
+
+//linkedin
 
 .linkedin-triangle {
   fill: #fff;
@@ -128,6 +136,8 @@ span {
   z-index: 2;
   transform: translate(-2%, -1%) rotate(45deg);
 }
+
+// github
 
 .github-corner {
   position: absolute;
@@ -175,16 +185,6 @@ span {
   }
 }
 
-/***********************[ Footer ]***********************/
-
-footer {
-  background-color: black;
-  text-align: center;
-  color: white;
-  font-size: $footer-size;
-  padding: 30px;
-}
-
 /***********************[ Sections ]***********************/
 
 section {
@@ -210,8 +210,8 @@ section {
 .project {
   position: relative;
   background: white;
-  overflow-x: hidden;
-  height: 120vh;
+  overflow: hidden;
+  height: 124vh;
 }
 
 .contact {
@@ -220,12 +220,203 @@ section {
   overflow: hidden;
 }
 
+// hello text
+
 #firsttext {
   width: 80%;
   padding-top: 100px;
 }
 
+// contact text
+
 #thirdtext {
+  color: white;
+}
+
+/***********************[ Quiz Section ]***********************/
+
+.quiz {
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  min-height: 82vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  h2 {
+    position: absolute;
+    color: $headline-color;
+    z-index: 0;
+    opacity: 0.05;
+  }
+}
+
+body {
+  --hue: var(--hue-neutral);
+  background-color: hsl(var(--hue), 100%, 50%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+  z-index: 1;
+}
+
+// button & button effects
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 40%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn,
+.next-btn {
+  background-color: hsl(var(--hue), 100%, 10%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  &:hover {
+    color: lightgray !important;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+// quiz footer
+
+.quiz-footer {
+  padding: 6rem 0 1rem;
+}
+
+.footer-text-box {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 0;
+}
+
+/***********************[ weather section ]***********************/
+
+.weather-form {
+  align-items: center !important;
+  z-index: 4 !important;
+}
+
+.weather-form input,
+.currency-input,
+.currency-select {
+  padding: 5px 8px !important;
+  border-radius: 8px !important;
+}
+
+/***********************[ currency section ]***********************/
+
+.currency-select {
+  background: #000;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.equals {
+  font-size: 2rem;
+}
+
+.App {
+  justify-content: center;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/***********************[ Headlines ]***********************/
+
+.typing {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+.project-headline {
+  position: absolute;
+  top: 2%;
+  left: 8%;
+}
+
+.contact-headline {
+  position: absolute;
+  top: 2%;
+  left: 8%;
   color: white;
 }
 
@@ -256,6 +447,29 @@ section {
 #headline3 {
   color: white;
   opacity: 0.13;
+}
+
+// typography
+
+h3 {
+  margin-bottom: 2rem;
+}
+
+h4,
+h5 {
+  font-weight: 200;
+  margin: 0.4em 0.4em;
+}
+h4 {
+  font-size: 3em;
+}
+h5 {
+  color: #333333;
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 0.8rem;
 }
 
 /***********************[ Form ]***********************/
@@ -385,160 +599,35 @@ button {
   align-items: center;
 }
 
-.quiz {
-  position: relative;
-  flex-direction: column;
-  text-align: center;
-  min-height: 82vh;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  h2 {
-    position: absolute;
-    color: $headline-color;
-    z-index: 0;
-    opacity: 0.05;
-  }
-}
-
-body {
-  --hue: var(--hue-neutral);
-  background-color: hsl(var(--hue), 100%, 50%);
-}
-
-body.correct {
-  --hue: var(--hue-correct);
-}
-
-body.wrong {
-  --hue: var(--hue-wrong);
-}
-
-.container {
-  width: 800px;
-  max-width: 80%;
-  background-color: white;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 0 10px 2px;
-  z-index: 1;
-}
-
-.btn-grid {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.btn {
-  --hue: var(--hue-neutral);
-  border: 1px solid hsl(var(--hue), 100%, 40%);
-  background-color: hsl(var(--hue), 100%, 50%);
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: black;
-  outline: none;
-}
-
-.btn:hover {
-  border-color: black;
-}
-
-.btn.correct {
-  --hue: var(--hue-correct);
-}
-
-.btn.wrong {
-  --hue: var(--hue-wrong);
-}
-
-.start-btn,
-.next-btn {
-  background-color: hsl(var(--hue), 100%, 10%);
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  color: white;
-  &:hover {
-    color: lightgray !important;
-  }
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hide {
-  display: none;
-}
-
-.quiz-footer {
-  padding: 6rem 0 1rem;
-}
-
-.footer-text-box {
-  height: 8vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px 0;
-}
-
-h3 {
-  margin-bottom: 2rem;
-}
-
-h4,
-h5 {
-  font-weight: 200;
-  margin: 0.4em 0.4em;
-}
-h4 {
-  font-size: 3em;
-}
-h5 {
-  color: #333333;
-  font-size: 1.5em;
-}
-
-h6 {
-  font-size: 0.8rem;
-}
-
-.typing {
-  position: absolute;
-  top: 20%;
-  left: 8%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-right: 3rem;
-}
-
 /***********************[ Portfolio slider ]***********************/
+
+.smiley-img {
+  margin: 0%;
+  width: 30rem;
+  height: auto;
+  position: absolute;
+  top: 25%;
+  left: -10%;
+  opacity: 0.1;
+}
 
 carousel {
   width: 100%;
   display: block;
-  font-weight: normal;
+  font-weight: 200;
 
   page {
     display: flex;
     flex-direction: row;
     position: absolute;
     padding: 0 2rem;
-    top: 8rem;
+    top: 7rem;
     left: 0;
     width: 100%;
     transition: transform 0.5s;
     transform: scale(0);
+
+    // next page button
 
     label {
       cursor: pointer;
@@ -560,6 +649,11 @@ carousel {
   margin-left: 3rem;
 }
 
+.portfolio-description a {
+  color: #18c9e0;
+  text-decoration: none;
+}
+
 .portfolio-img img {
   width: 42vw;
   height: auto;
@@ -575,11 +669,8 @@ carousel {
   margin-top: 0;
 }
 
-.portfolio-description a {
-  color: #18c9e0;
-  text-decoration: none;
-}
 /***********************[ Cookies compliance message ]***********************/
+
 #okCookie {
   background-color: black;
   color: white;
@@ -634,52 +725,14 @@ carousel {
   animation: myfirst 2s;
 }
 
-/***********************[ weather forecast & currency converter ]***********************/
+/***********************[ Footer ]***********************/
 
-.weather-form {
-  align-items: center !important;
-  z-index: 4 !important;
-}
-
-.weather-form input,
-.currency-input,
-.currency-select {
-  padding: 5px 8px !important;
-  border-radius: 8px !important;
-}
-
-.currency-select {
-  background: #000;
+footer {
+  background-color: black;
+  text-align: center;
   color: white;
-  font-size: 1.2rem;
-}
-
-.equals {
-  font-size: 2rem;
-}
-
-.App {
-  justify-content: center;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes myfirst {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Standard syntax */
-@keyframes myfirst {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  font-size: $footer-size;
+  padding: 30px;
 }
 
 /***********************[ Media responsivness ]***********************/

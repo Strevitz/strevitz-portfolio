@@ -255,6 +255,17 @@ jQuery(function ($) {
   $("#link3").click(function () {
     $.scrollTo($("#contact-box"), 500);
   });
+
+  $(document).scroll(function () {
+    windowScroll();
+  });
+
+  function windowScroll() {
+    var st = $(document).scrollTop();
+
+    $("#carousel").css({ top: -160 - st * 0.25 + "px" });
+    //$("#carousel").css({ left: 400 - st * 0.3 + "px" });
+  }
 });
 
 // recaptcha

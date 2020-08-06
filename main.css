@@ -24,12 +24,7 @@ header {
   overflow: hidden;
 }
 
-.logo-text {
-  font-family: "Pacifico", cursive;
-  color: #18c9e0;
-  font-size: 1.8rem;
-}
-
+/***********************[ Navbar ]***********************/
 nav {
   min-height: 10vh;
   margin: auto;
@@ -79,6 +74,7 @@ nav a:hover {
   color: #18c9e0 !important;
 }
 
+/***********************[ Navbar Bubble Effect ]***********************/
 .bubble {
   position: absolute;
   z-index: -1;
@@ -92,6 +88,12 @@ nav a:hover {
 }
 
 /***********************[ Nav Brand ]***********************/
+.logo-text {
+  font-family: "Pacifico", cursive;
+  color: #18c9e0;
+  font-size: 1.8rem;
+}
+
 span {
   margin-left: 6px;
 }
@@ -106,7 +108,7 @@ span {
     pointer-events: none;
 }
 */
-/***********************[ social links ]***********************/
+/***********************[ Avatar Photography ]***********************/
 #avatar {
   position: absolute;
   border-bottom-left-radius: 10%;
@@ -120,6 +122,7 @@ span {
   box-shadow: 0px 2px 14px 0px #0f0f0f75;
 }
 
+/***********************[ social links ]***********************/
 .linkedin-triangle {
   fill: #fff;
   color: #000;
@@ -211,15 +214,6 @@ span {
   }
 }
 
-/***********************[ Footer ]***********************/
-footer {
-  background-color: black;
-  text-align: center;
-  color: white;
-  font-size: 0.7rem;
-  padding: 30px;
-}
-
 /***********************[ Sections ]***********************/
 section {
   min-height: 100vh;
@@ -251,8 +245,8 @@ section h2 {
 .project {
   position: relative;
   background: white;
-  overflow-x: hidden;
-  height: 120vh;
+  overflow: hidden;
+  height: 124vh;
 }
 
 .contact {
@@ -267,6 +261,223 @@ section h2 {
 }
 
 #thirdtext {
+  color: white;
+}
+
+/***********************[ Quiz Section ]***********************/
+.quiz {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  min-height: 82vh;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.quiz h2 {
+  position: absolute;
+  color: #020202;
+  z-index: 0;
+  opacity: 0.05;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  background-color: hsl(var(--hue), 100%, 50%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 10px 2px;
+          box-shadow: 0 0 10px 2px;
+  z-index: 1;
+}
+
+.btn-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 40%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: black;
+  outline: none;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn,
+.next-btn {
+  background-color: hsl(var(--hue), 100%, 10%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+}
+
+.start-btn:hover,
+.next-btn:hover {
+  color: lightgray !important;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.quiz-footer {
+  padding: 6rem 0 1rem;
+}
+
+.footer-text-box {
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px 0;
+}
+
+/***********************[ weather section ]***********************/
+.weather-form {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  z-index: 4 !important;
+}
+
+.weather-form input,
+.currency-input,
+.currency-select {
+  padding: 5px 8px !important;
+  border-radius: 8px !important;
+}
+
+/***********************[ currency section ]***********************/
+.currency-select {
+  background: #000;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.equals {
+  font-size: 2rem;
+}
+
+.App {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/***********************[ Headlines ]***********************/
+.typing {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 3rem;
+}
+
+.project-headline {
+  position: absolute;
+  top: 2%;
+  left: 8%;
+}
+
+.contact-headline {
+  position: absolute;
+  top: 2%;
+  left: 8%;
   color: white;
 }
 
@@ -300,6 +511,29 @@ section h2 {
 #headline3 {
   color: white;
   opacity: 0.13;
+}
+
+h3 {
+  margin-bottom: 2rem;
+}
+
+h4,
+h5 {
+  font-weight: 200;
+  margin: 0.4em 0.4em;
+}
+
+h4 {
+  font-size: 3em;
+}
+
+h5 {
+  color: #333333;
+  font-size: 1.5em;
+}
+
+h6 {
+  font-size: 0.8rem;
 }
 
 /***********************[ Form ]***********************/
@@ -471,184 +705,21 @@ button {
           align-items: center;
 }
 
-.quiz {
-  position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  min-height: 82vh;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
-}
-
-.quiz h2 {
-  position: absolute;
-  color: #020202;
-  z-index: 0;
-  opacity: 0.05;
-}
-
-body {
-  --hue: var(--hue-neutral);
-  background-color: hsl(var(--hue), 100%, 50%);
-}
-
-body.correct {
-  --hue: var(--hue-correct);
-}
-
-body.wrong {
-  --hue: var(--hue-wrong);
-}
-
-.container {
-  width: 800px;
-  max-width: 80%;
-  background-color: white;
-  border-radius: 5px;
-  padding: 10px;
-  -webkit-box-shadow: 0 0 10px 2px;
-          box-shadow: 0 0 10px 2px;
-  z-index: 1;
-}
-
-.btn-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.btn {
-  --hue: var(--hue-neutral);
-  border: 1px solid hsl(var(--hue), 100%, 40%);
-  background-color: hsl(var(--hue), 100%, 50%);
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: black;
-  outline: none;
-}
-
-.btn:hover {
-  border-color: black;
-}
-
-.btn.correct {
-  --hue: var(--hue-correct);
-}
-
-.btn.wrong {
-  --hue: var(--hue-wrong);
-}
-
-.start-btn,
-.next-btn {
-  background-color: hsl(var(--hue), 100%, 10%);
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px 20px;
-  color: white;
-}
-
-.start-btn:hover,
-.next-btn:hover {
-  color: lightgray !important;
-}
-
-.controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hide {
-  display: none;
-}
-
-.quiz-footer {
-  padding: 6rem 0 1rem;
-}
-
-.footer-text-box {
-  height: 8vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 20px 0;
-}
-
-h3 {
-  margin-bottom: 2rem;
-}
-
-h4,
-h5 {
-  font-weight: 200;
-  margin: 0.4em 0.4em;
-}
-
-h4 {
-  font-size: 3em;
-}
-
-h5 {
-  color: #333333;
-  font-size: 1.5em;
-}
-
-h6 {
-  font-size: 0.8rem;
-}
-
-.typing {
-  position: absolute;
-  top: 20%;
-  left: 8%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-right: 3rem;
-}
-
 /***********************[ Portfolio slider ]***********************/
+.smiley-img {
+  margin: 0%;
+  width: 30rem;
+  height: auto;
+  position: absolute;
+  top: 25%;
+  left: -10%;
+  opacity: 0.1;
+}
+
 carousel {
   width: 100%;
   display: block;
-  font-weight: normal;
+  font-weight: 200;
 }
 
 carousel page {
@@ -661,7 +732,7 @@ carousel page {
           flex-direction: row;
   position: absolute;
   padding: 0 2rem;
-  top: 8rem;
+  top: 7rem;
   left: 0;
   width: 100%;
   -webkit-transition: -webkit-transform 0.5s;
@@ -718,6 +789,11 @@ carousel #page7cb:checked ~ #page7 {
   margin-left: 3rem;
 }
 
+.portfolio-description a {
+  color: #18c9e0;
+  text-decoration: none;
+}
+
 .portfolio-img img {
   width: 42vw;
   height: auto;
@@ -731,11 +807,6 @@ carousel #page7cb:checked ~ #page7 {
 
 .portfolio-header {
   margin-top: 0;
-}
-
-.portfolio-description a {
-  color: #18c9e0;
-  text-decoration: none;
 }
 
 /***********************[ Cookies compliance message ]***********************/
@@ -792,55 +863,13 @@ carousel #page7cb:checked ~ #page7 {
   animation: myfirst 2s;
 }
 
-/***********************[ weather forecast & currency converter ]***********************/
-.weather-form {
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
-  z-index: 4 !important;
-}
-
-.weather-form input,
-.currency-input,
-.currency-select {
-  padding: 5px 8px !important;
-  border-radius: 8px !important;
-}
-
-.currency-select {
-  background: #000;
+/***********************[ Footer ]***********************/
+footer {
+  background-color: black;
+  text-align: center;
   color: white;
-  font-size: 1.2rem;
-}
-
-.equals {
-  font-size: 2rem;
-}
-
-.App {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes myfirst {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Standard syntax */
-@keyframes myfirst {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  font-size: 0.7rem;
+  padding: 30px;
 }
 
 /***********************[ Media responsivness ]***********************/
